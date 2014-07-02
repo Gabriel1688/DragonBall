@@ -1,0 +1,5 @@
+format 74
+
+classinstance 128379 class_ref 128123 // Casule_User
+  name ""   xyz 182 4 2005 life_line_z 2000
+end

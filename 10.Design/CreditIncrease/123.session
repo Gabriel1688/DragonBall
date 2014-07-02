@@ -1,0 +1,12 @@
+window_sizes 1920 1056 320 1594 862 120
+diagrams
+  active  usecasediagram_ref 128123 // CreditInc
+    1594 862 190 4 48 22
+end
+show_stereotypes
+selected 
+  package_ref 129 // CreditIncrease
+open
+  usecaseview_ref 128123 // Design
+end
+end
