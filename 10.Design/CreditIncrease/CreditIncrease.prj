@@ -91,7 +91,7 @@ ${inlines}
       show_infonote default drawing_language default show_stereotype_properties default
       comment "Menu includes: 
 Credit increasing
-Balance check"
+"
     end
 
     usecase 135291 "Balance request"

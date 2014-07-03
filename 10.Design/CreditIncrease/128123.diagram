@@ -2,13 +2,13 @@ format 74
 
 classcanvas 128123 class_ref 128123 // Casule_User
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 42.8 190.8 2000
+  xyz 42.6 190.6 2000
 end
 usecasecanvas 128763 usecase_ref 128251 // Credit increasing
-  xyzwh 190.8 171.4 3005 64 32 label_xy 176 203
+  xyzwh 239.9 160.4 3005 64 32 label_xy 226 192
 end
 usecasecanvas 130555 usecase_ref 135291 // Balance request
-  xyzwh 223 302 3005 64 32 label_xy 209 334
+  xyzwh 241.6 304.3 3005 64 32 label_xy 228 336
 end
 line 128891 --->
   from ref 128123 z 3006 to ref 128763
