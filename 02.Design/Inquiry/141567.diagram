@@ -1,0 +1,47 @@
+format 74
+
+classinstance 128255 class_ref 134655 // Customer
+  name "Customer"   xyz 29 3.8 2000 life_line_z 2000
+classinstance 128383 class_ref 134783 // Printer
+  name "Printer"   xyz 473.9 3.8 2000 life_line_z 2000
+classinstance 128511 class_ref 134783 // Printer
+  name ""   xyz 756.2 3.8 2000 life_line_z 2000
+classinstance 129151 class_ref 141439 // Clogin
+  name "Result Output"   xyz 246.9 5.6 2000 life_line_z 2000
+note 131455 "Prompt take away result"
+  xyzwh 102.7 105.2 2020 178 35
+note 135295 "Print Request
+"
+  xyzwh 324.7 71.9 2030 168 36
+note 136703 "Print Request"
+  xyzwh 102 51.8 2020 128 35
+durationcanvas 129279 classinstance_ref 129151 // Result Output:Clogin
+  xyzwh 303 73 2010 11 86
+end
+durationcanvas 135935 classinstance_ref 128255 // Customer:Customer
+  xyzwh 80 75 2010 11 102
+end
+durationcanvas 136191 classinstance_ref 128383 // Printer:Printer
+  xyzwh 507 109 2010 11 43
+end
+msg 136063 synchronous
+  from durationcanvas_ref 135935
+  to durationcanvas_ref 129279
+  yz 83 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 136319 synchronous
+  from durationcanvas_ref 129279
+  to durationcanvas_ref 136191
+  yz 109 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 136447 return
+  from durationcanvas_ref 136191
+  to durationcanvas_ref 129279
+  yz 143 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 136575 return
+  from durationcanvas_ref 129279
+  to durationcanvas_ref 135935
+  yz 141 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end
