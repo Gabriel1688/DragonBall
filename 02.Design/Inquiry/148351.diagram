@@ -1,0 +1,110 @@
+format 74
+
+pseudostatecanvas 128127 pseudostate_ref 134655 // initial
+   xyz 116.1 176.3 2000
+end
+statecanvas 128383 state_ref 134783 // ST_Login
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 295.8 167.7 2000 74 37
+end
+statecanvas 128511 state_ref 134911 // ST_Inquiry
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 293.8 267.6 2000 81 37
+end
+statecanvas 128639 state_ref 135039 // ST_Print
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 341.5 431.1 2000 69 37
+end
+statecanvas 128767 state_ref 135167 // ST_Billing
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 403.7 268.3 2000 79 37
+end
+statecanvas 128895 state_ref 135295 // ST_Login_Idle
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 266.9 147.8 2011 119 53
+end
+statecanvas 129023 state_ref 135423 // ST_Login_Account
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 252.1 147.9 3018 129 53
+end
+statecanvas 129151 state_ref 135551 // ST_Login_PWD
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 281 193.1 3011 119 53
+end
+pseudostatecanvas 129279 pseudostate_ref 134911 // exit_point
+   xyz 438.3 102.9 3005 label_xy 420 123
+end
+pseudostatecanvas 132223 pseudostate_ref 135039 // exit_point
+   xyz 366.5 340.5 3005 label_xy 370 359
+end
+note 134271 "Touch the Keyboard"
+  xyzwh 138 189 2006 135 34
+note 134527 "Input the Card or
+Input the Card Number"
+  xyzwh 322.2 8.5 2011 145 55
+note 134783 "PWD is invalidate and 
+retry didn't exceed the limition"
+  xyzwh 498 220.2 2000 165 70
+note 134911 "Press the Print Key "
+  xyzwh 396.5 345.9 2000 199 37
+transitioncanvas 129407 transition_ref 134655 // <transition>
+  
+  from ref 128127 z 2001 to ref 128383
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129535 transition_ref 134783 // <transition>
+  
+  from ref 128895 z 3019 to point 467.7 64.8
+  line 129663 z 3019 to ref 129023
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130943 transition_ref 135167 // Account Validation
+  
+  from ref 129023 z 3019 label "Account Validation" xyz 330 222 3019 to ref 129151
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131071 transition_ref 135295 // <transition>
+  
+  from ref 129151 z 3012 to ref 129279
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131199 transition_ref 135423 // <transition>
+  decenter_begin 224
+  decenter_end 773
+  
+  from ref 129151 z 3012 to point 253.5 203.5
+  line 131327 z 3012 to point 253.8 231.9
+  line 131455 z 3012 to ref 129151
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131583 transition_ref 135551 // <transition>
+  
+  from ref 129023 z 3019 to ref 129279
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131711 transition_ref 135679 // <transition>
+  
+  from ref 128383 z 2001 to ref 128511
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 132735 transition_ref 136191 // Print / Time Experiation
+  
+  from ref 128511 z 3006 label "Print / Time Experiation" xyz 292 315 3000 to ref 132223
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 132863 transition_ref 136319 // <transition>
+  
+  from ref 128767 z 3006 to ref 132223
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 132991 transition_ref 136447 // <transition>
+  
+  from ref 128383 z 2001 to ref 128767
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 133119 transition_ref 136575 // <transition>
+  
+  from ref 132223 z 3006 to ref 128639
+  write_horizontally default show_definition default drawing_language default
+end
+end

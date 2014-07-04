@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Bouml (http://bouml.free.fr/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1022" height="667" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<ellipse fill="none" stroke="black" stroke-width="1" stroke-opacity="1" cx="110" cy="337" rx="6" ry="6" />
+	<line stroke="black" stroke-opacity="1" x1="99" y1="349" x2="121" y2="349" />
+	<line stroke="black" stroke-opacity="1" x1="110" y1="344" x2="110" y2="359" />
+	<line stroke="black" stroke-opacity="1" x1="110" y1="359" x2="100" y2="370" />
+	<line stroke="black" stroke-opacity="1" x1="110" y1="359" x2="120" y2="370" />
+	<text font-family="Helvetica" font-size="9" fill="#000000" xml:space="preserve" text-anchor="middle" x="111" y="382">Customer</text>
+</g>
+<g>
+	<ellipse fill="none" stroke="black" stroke-width="1" stroke-opacity="1" cx="110" cy="499" rx="6" ry="6" />
+	<line stroke="black" stroke-opacity="1" x1="99" y1="511" x2="121" y2="511" />
+	<line stroke="black" stroke-opacity="1" x1="110" y1="506" x2="110" y2="521" />
+	<line stroke="black" stroke-opacity="1" x1="110" y1="521" x2="100" y2="532" />
+	<line stroke="black" stroke-opacity="1" x1="110" y1="521" x2="120" y2="532" />
+	<text font-family="Helvetica" font-size="9" fill="#000000" xml:space="preserve" text-anchor="middle" x="111" y="544">Administrator</text>
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="111" y1="492" x2="111" y2="401" />
+	<line stroke="black" stroke-opacity="1" x1="111" y1="395" x2="105" y2="401" />
+	<line stroke="black" stroke-opacity="1" x1="111" y1="395" x2="117" y2="401" />
+	<line stroke="black" stroke-opacity="1" x1="105" y1="401" x2="117" y2="401" />
+</g>
+<g>
+	<text font-family="Helvetica" font-size="9" fill="#000000" xml:space="preserve" x="112" y="128">&lt;&lt;include&gt;&gt;</text>
+</g>
+<g>
+	<rect fill="#f6f6f6" stroke="black" stroke-width="1" stroke-opacity="1" x="40" y="36" width="597" height="181" />
+</g>
+<g>
+	<ellipse fill="#808080" stroke="none" cx="512" cy="338" rx="31" ry="15" />
+	<ellipse fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" cx="509" cy="335" rx="31" ry="15" />
+</g>
+<g>
+	<text font-family="Helvetica" font-size="9" fill="#000000" xml:space="preserve" x="487" y="361">Transfer</text>
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="110" y1="330" x2="110" y2="195" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="110" y1="74" x2="104" y2="80" />
+	<line stroke="black" stroke-opacity="1" x1="110" y1="74" x2="116" y2="80" />
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="110" y1="163" x2="110" y2="74" />
+</g>
+<g>
+	<ellipse fill="#808080" stroke="none" cx="113" cy="182" rx="31" ry="15" />
+	<ellipse fill="#ffd700" stroke="black" stroke-width="1" stroke-opacity="1" cx="110" cy="179" rx="31" ry="15" />
+</g>
+<g>
+	<ellipse fill="#808080" stroke="none" cx="114" cy="61" rx="31" ry="15" />
+	<ellipse fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" cx="111" cy="58" rx="31" ry="15" />
+</g>
+<g>
+	<ellipse fill="#808080" stroke="none" cx="509" cy="180" rx="31" ry="15" />
+	<ellipse fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" cx="506" cy="177" rx="31" ry="15" />
+</g>
+<g>
+	<text font-family="Helvetica" font-size="9" fill="#000000" xml:space="preserve" x="85" y="205">Withdraw</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="9" fill="#000000" xml:space="preserve" x="152" y="63">Card Identification</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="9" fill="#000000" xml:space="preserve" x="438" y="203">Perfrom ATM Transaction</text>
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="142" y1="178" x2="468" y2="177" />
+	<line stroke="black" stroke-opacity="1" x1="474" y1="177" x2="467" y2="171" />
+	<line stroke="black" stroke-opacity="1" x1="474" y1="177" x2="468" y2="183" />
+	<line stroke="black" stroke-opacity="1" x1="467" y1="171" x2="468" y2="183" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="477" y1="322" x2="147" y2="192" />
+	<line stroke="black" stroke-opacity="1" x1="142" y1="190" x2="145" y2="197" />
+	<line stroke="black" stroke-opacity="1" x1="142" y1="190" x2="149" y2="186" />
+	<line stroke="black" stroke-opacity="1" x1="145" y1="197" x2="149" y2="186" />
+</g>
+</svg>

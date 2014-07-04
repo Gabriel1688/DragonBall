@@ -1,0 +1,12 @@
+window_sizes 1339 890 291 1042 696 120
+windows_style
+diagrams
+  classdiagram_ref 128255 // inquiry
+    124 674 100 4 0 0
+  active  usecasediagram_ref 135295 // Use Case Diagram1
+    1042 696 100 4 0 0
+end
+show_stereotypes
+selected 
+  package_ref 129 // Demo
+end

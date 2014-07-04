@@ -1,0 +1,42 @@
+format 74
+
+classcanvas 128127 class_ref 135039 // Customer
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 81 331 2000
+end
+usecasecanvas 128255 usecase_ref 134783 // Withdraw
+  color gold
+  xyzwh 79 163 3010 64 32 label_xy 85 195
+end
+usecasecanvas 128383 usecase_ref 134911 // Card Identification
+  xyzwh 80 43 3010 64 32 label_xy 152 54
+end
+classcanvas 128639 class_ref 135167 // Administrator
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 71 493 2000
+end
+subject 129791 ""
+  color verylightgray  xyzwh 40 36 3005 598 182
+usecasecanvas 130047 usecase_ref 135167 // Perfrom ATM Transaction
+  xyzwh 475 162 3010 64 32 label_xy 438 194
+end
+usecasecanvas 130815 usecase_ref 135295 // Transfer
+  xyzwh 478 320 3005 64 32 label_xy 487 352
+end
+relationcanvas 128767 relation_ref 128127 // <generalisation>
+  from ref 128639 z 2001 to ref 128127
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+line 129151 ----
+  from ref 128127 z 3006 to ref 128255
+simplerelationcanvas 129535 simplerelation_ref 128127
+  from ref 128255 z 3006 stereotype "<<include>>" xyz 112 119 3000 to ref 128383
+end
+simplerelationcanvas 130943 simplerelation_ref 128511
+  from ref 130815 z 3011 to ref 128255
+end
+simplerelationcanvas 131071 simplerelation_ref 128383
+  from ref 128255 z 3011 to ref 130047
+end
+end

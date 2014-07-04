@@ -1,0 +1,29 @@
+window_sizes 1855 1056 322 1527 862 120
+windows_style
+diagrams
+  usecasediagram_ref 128255 // Login
+    1401 862 157 4 0 0
+  usecasediagram_ref 134783 // Inquiry Use Case -L0
+    1120 689 130 4 54 0
+  sequencediagram_ref 141439 // Inquiry Sequence-Login
+    1120 689 137 4 0 0
+  usecasediagram_ref 141311 // Inquiry Item Select
+    1120 689 100 4 0 0
+  sequencediagram_ref 141567 // Inquiry Sequence-Service Select
+    978 696 130 4 0 0
+  statediagram_ref 148351 // ATM status-Inquiry
+    1785 862 110 4 0 0
+  classdiagram_ref 154879 // CLogin
+    1494 862 100 4 0 0
+  sequencediagram_ref 141695 // Inquiry Sequence - Result Output
+    1195 689 100 4 0 0
+  active  activitydiagram_ref 161407 // InquiryActtivity
+    1527 862 100 4 0 0
+end
+show_stereotypes
+selected activity_ref 128127 // Inquiry Activity
+open
+  usecasediagram_ref 141311 // Inquiry Item Select
+  activity_ref 128127 // Inquiry Activity
+end
+end

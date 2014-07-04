@@ -1,0 +1,151 @@
+format 74
+
+classinstance 128255 class_ref 134655 // Customer
+  name ""   xyz 57.9 4.02 2000 life_line_z 2000
+classinstance 128383 class_ref 134911 // Bank
+  name ""   xyz 494.74 4.02 2000 life_line_z 2000
+classinstance 128511 class_ref 134783 // Printer
+  name ""   xyz 757.18 4.02 2000 life_line_z 2000
+fragment 129023 "non-Card"
+  xyzwh 9.82 285.68 2005 509 115
+end
+classinstance 129151 class_ref 141439 // Clogin
+  name "Range Select"   xyz 250.86 5.52 2000 life_line_z 2000
+note 130047 "1: Card Related Service
+2: Non-Card Service
+"
+  xyzwh 122.64 27.88 2020 169 51
+note 131327 "1.Insert Card, 
+2.Read Information from Card"
+  xyzwh 102.36 130.76 2020 185 48
+note 131455 "Validate the Card 
+Validate the accont"
+  xyzwh 334.46 146.8 2020 151 48
+note 131583 "prompt Input the Pwd if card and account is validate "
+  xyzwh 112.76 231.7 2020 185 49
+note 132095 "1.select the Card type
+2.Input Card number"
+  xyzwh 112.16 303.12 2010 186 52
+note 133759 "Input PWD"
+  xyzwh 114.74 434.54 2020 135 34
+note 133887 "Account Authentication"
+  xyzwh 326.24 407.96 2020 162 35
+durationcanvas 129279 classinstance_ref 129151 // Range Select:Clogin
+  xyzwh 304 73.08 2010 11 40
+end
+durationcanvas 129407 classinstance_ref 128255 // :Customer
+  xyzwh 80 72.16 2010 11 26
+end
+durationcanvas 129663 classinstance_ref 128255 // :Customer
+  xyzwh 80 121.38 2010 11 33
+end
+durationcanvas 129791 classinstance_ref 129151 // Range Select:Clogin
+  xyzwh 303 121.42 2010 11 26
+end
+durationcanvas 130175 classinstance_ref 128255 // :Customer
+  xyzwh 80 177.78 2010 11 40
+end
+durationcanvas 130303 classinstance_ref 129151 // Range Select:Clogin
+  xyzwh 303 176.86 2010 11 26
+end
+durationcanvas 130559 classinstance_ref 128383 // :Bank
+  xyzwh 506 192.96 2010 11 25
+end
+durationcanvas 130815 classinstance_ref 129151 // Range Select:Clogin
+  xyzwh 304 209.54 2010 11 25
+end
+durationcanvas 131071 classinstance_ref 128255 // :Customer
+  xyzwh 80 221.42 2010 11 25
+end
+durationcanvas 131711 classinstance_ref 128255 // :Customer
+  xyzwh 80 296.34 2010 11 92
+end
+durationcanvas 131839 classinstance_ref 129151 // Range Select:Clogin
+  xyzwh 304 296.92 2010 11 25
+end
+durationcanvas 132223 classinstance_ref 129151 // Range Select:Clogin
+  xyzwh 304 326.66 2010 11 66
+end
+durationcanvas 132351 classinstance_ref 128383 // :Bank
+  xyzwh 506 326.52 2010 11 45
+end
+durationcanvas 132863 classinstance_ref 128255 // :Customer
+  xyzwh 80 429.54 2010 11 85
+end
+durationcanvas 132991 classinstance_ref 129151 // Range Select:Clogin
+  xyzwh 304 430.36 2010 11 69
+end
+durationcanvas 133247 classinstance_ref 128383 // :Bank
+  xyzwh 506 441.96 2010 11 27
+end
+msg 129535 synchronous
+  from durationcanvas_ref 129279
+  to durationcanvas_ref 129407
+  yz 71 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129919 return
+  from durationcanvas_ref 129663
+  to durationcanvas_ref 129791
+  yz 120 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130431 synchronous
+  from durationcanvas_ref 130175
+  to durationcanvas_ref 130303
+  yz 176 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130687 asynchronous
+  from durationcanvas_ref 130303
+  to durationcanvas_ref 130559
+  yz 190 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130943 return
+  from durationcanvas_ref 130559
+  to durationcanvas_ref 130815
+  yz 207 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131199 return
+  from durationcanvas_ref 130815
+  to durationcanvas_ref 131071
+  yz 219 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131967 synchronous
+  from durationcanvas_ref 131711
+  to durationcanvas_ref 131839
+  yz 295 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132479 synchronous
+  from durationcanvas_ref 132223
+  to durationcanvas_ref 132351
+  yz 324 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132607 return
+  from durationcanvas_ref 132351
+  to durationcanvas_ref 132223
+  yz 351 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132735 return
+  from durationcanvas_ref 132223
+  to durationcanvas_ref 131711
+  yz 373 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133119 synchronous
+  from durationcanvas_ref 132863
+  to durationcanvas_ref 132991
+  yz 430 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133375 synchronous
+  from durationcanvas_ref 132991
+  to durationcanvas_ref 133247
+  yz 441 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133503 return
+  from durationcanvas_ref 133247
+  to durationcanvas_ref 132991
+  yz 459 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133631 return
+  from durationcanvas_ref 132991
+  to durationcanvas_ref 132863
+  yz 487 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end
