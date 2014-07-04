@@ -1,6 +1,6 @@
 format 74
 "CreditIncrease"
-  revision 3
+  revision 4
   modified_by 123 "james"
 
 
@@ -116,6 +116,28 @@ Credit increasing
     sequencediagram 134651 "Deposit"
       show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
       overlapping_bars size A4
+    end
+
+    class 134651 "BackEnd"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    classinstance 128123 "Back-End Service"
+      type class_ref 134651 // BackEnd
+      attributes
+        end
+      relations
+        end
     end
   end
 end

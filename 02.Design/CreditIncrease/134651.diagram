@@ -2,4 +2,79 @@ format 74
 
 classinstance 128379 class_ref 128123 // Casule_User
   name ""   xyz 182 4 2005 life_line_z 2000
+classinstancecanvas 128507 classinstance_ref 128123 // Back-End Service
+  xyz 466 4 2005 life_line_z 2000
+end
+durationcanvas 128635 classinstance_ref 128379 // :Casule_User
+  xyzwh 216 62 2010 11 40
+end
+durationcanvas 128891 classinstance_ref 128379 // :Casule_User
+  xyzwh 216 146 2010 11 40
+end
+durationcanvas 129019 classinstance_ref 128507 // Back-End Service:BackEnd
+  xyzwh 541 146 2010 11 25
+end
+durationcanvas 129275 classinstance_ref 128507 // Back-End Service:BackEnd
+  xyzwh 541 215 2010 11 40
+end
+durationcanvas 129403 classinstance_ref 128379 // :Casule_User
+  xyzwh 216 215 2010 11 25
+end
+durationcanvas 129659 classinstance_ref 128379 // :Casule_User
+  xyzwh 216 283 2010 11 40
+end
+durationcanvas 129915 classinstance_ref 128379 // :Casule_User
+  xyzwh 216 346 2010 11 40
+end
+durationcanvas 130043 classinstance_ref 128507 // Back-End Service:BackEnd
+  xyzwh 541 346 2010 11 25
+end
+durationcanvas 130299 classinstance_ref 128507 // Back-End Service:BackEnd
+  xyzwh 541 414 2010 11 40
+end
+durationcanvas 130427 classinstance_ref 128379 // :Casule_User
+  xyzwh 216 414 2010 11 25
+end
+durationcanvas 130683 classinstance_ref 128379 // :Casule_User
+  xyzwh 216 479 2010 11 40
+end
+reflexivemsg 128763 synchronous
+  to durationcanvas_ref 128635
+  yz 62 2015 explicitmsg "Swap Member card"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 182 46
+msg 129147 synchronous
+  from durationcanvas_ref 128891
+  to durationcanvas_ref 129019
+  yz 146 2015 explicitmsg "Idetify Member card"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 329 130
+msg 129531 asynchronous
+  from durationcanvas_ref 129275
+  to durationcanvas_ref 129403
+  yz 215 2015 explicitmsg "Member card is valid"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 326 199
+reflexivemsg 129787 synchronous
+  to durationcanvas_ref 129659
+  yz 283 2015 explicitmsg "Swap Credit card"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 188 267
+msg 130171 synchronous
+  from durationcanvas_ref 129915
+  to durationcanvas_ref 130043
+  yz 346 2015 explicitmsg "Charging process"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 334 330
+msg 130555 synchronous
+  from durationcanvas_ref 130299
+  to durationcanvas_ref 130427
+  yz 414 2015 explicitmsg "Transactions success"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 324 398
+reflexivemsg 130811 synchronous
+  to durationcanvas_ref 130683
+  yz 479 2015 explicitmsg "Display and Print the receipt"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 158 463
 end
