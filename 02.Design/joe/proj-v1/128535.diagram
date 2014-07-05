@@ -1,0 +1,26 @@
+format 74
+
+classcanvas 128023 class_ref 128023 // charger
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 410 124 2000
+end
+classcanvas 128151 class_ref 128279 // BANK
+  class_drawing_mode boundary show_context_mode default show_stereotype_properties default
+  xyz 126 81 2000
+end
+classcanvas 128279 class_ref 128791 // CLIENT
+  class_drawing_mode boundary show_context_mode default show_stereotype_properties default
+  xyz 122 190 2000
+end
+usecasecanvas 128407 usecase_ref 128151 // Charge
+  xyzwh 266 140 3005 64 32 label_xy 277 172
+end
+note 128919 "Charge_Interaction_Diagram"
+  xyzwh 69 26 2000 199 39
+line 128535 ----
+  from ref 128151 z 3006 to ref 128407
+line 128663 ----
+  from ref 128279 z 3006 to ref 128407
+line 128791 ----
+  from ref 128407 z 3006 to ref 128023
+end

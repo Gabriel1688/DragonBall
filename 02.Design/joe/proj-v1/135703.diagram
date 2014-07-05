@@ -1,0 +1,130 @@
+format 74
+
+pseudostatecanvas 128023 pseudostate_ref 134551 // initial
+   xyz 34 107 2000
+end
+statecanvas 128151 state_ref 134551 // IC_Card_Generated
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 139 97 2000 135 37
+end
+statecanvas 128279 state_ref 134679 // Charge_Amount_Confirmed
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 369 96 2000 181 37
+end
+statecanvas 128407 state_ref 134807 // Credit_Card_Received
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 632 96 2000 151 37
+end
+statecanvas 128535 state_ref 134935 // Charge_Payment_Applied
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 621 203 2000 171 37
+end
+statecanvas 128663 state_ref 135063 // Charge_Payment_Accepted
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 390 292 2000 183 37
+end
+statecanvas 128791 state_ref 135191 // Charge_Payment_Refused
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 122 294 2005 175 37
+end
+statecanvas 128919 state_ref 135319 // IC_Card_Balance_Updated
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 392 381 2000 177 37
+end
+statecanvas 129047 state_ref 135447 // Charge_Info_Logged
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 411 465 2000 139 37
+end
+statecanvas 129175 state_ref 135575 // Charge_Re-try_Logged
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  xyzwh 130 467 2010 155 37
+end
+pseudostatecanvas 129303 pseudostate_ref 134679 // final
+   xyz 713 470 2000
+end
+note 129431 "Charge_Status_Diagram"
+  xyzwh 31 22 2000 169 37
+pseudostatecanvas 130199 pseudostate_ref 134935 // choice
+   xyz 470 204 2000
+end
+pseudostatecanvas 132247 pseudostate_ref 135063 // choice
+   xyz 196 378 2000
+end
+transitioncanvas 129559 transition_ref 134551 // Get_IC_Card
+  
+  from ref 128023 z 2001 label "Get_IC_Card" xyz 58 91 3000 to ref 128151
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129687 transition_ref 134679 // Charge_Amount_Confirm
+  
+  from ref 128151 z 2001 label "Charge_Amount_Confirm" xyz 249 81 3000 to ref 128279
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129815 transition_ref 134807 // Get_Credit_Card
+  
+  from ref 128279 z 2001 label "Get_Credit_Card" xyz 542 80 3000 to ref 128407
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129943 transition_ref 134935 // Charge_Payment_Apply
+  
+  from ref 128407 z 2001 label "Charge_Payment_Apply" xyz 638 159 3000 to ref 128535
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130455 transition_ref 135191 // Payment_Accept
+  
+  from ref 130199 z 2001 label "Payment_Accept" xyz 434 257 3000 to ref 128663
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130583 transition_ref 135319 // IC_Card_Balance_Update
+  
+  from ref 128663 z 2001 label "IC_Card_Balance_Update" xyz 406 346 3000 to ref 128919
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130711 transition_ref 135447 // Charge_Data_Update
+  
+  from ref 128919 z 2001 label "Charge_Data_Update" xyz 418 432.5 3000 to ref 129047
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130839 transition_ref 135575 // <transition>
+  
+  from ref 129047 z 2001 to ref 129303
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130967 transition_ref 135703 // Payment_Refuse
+  
+  from ref 130199 z 2006 label "Payment_Refuse" xyz 360 201 3000 to point 339 220
+  line 131607 z 2006 to point 339 309
+  line 131735 z 2006 to ref 128791
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131479 transition_ref 136087 // Charge_Re-try
+  
+  from ref 129175 z 2011 label "Charge_Re-try" xyz 96 214 3000 to point 76 483
+  line 132631 z 2011 to point 76 238
+  line 132503 z 2011 to point 203 238
+  line 132759 z 2011 to ref 128151
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 132119 transition_ref 136215 // Charge_Payment_Result
+  
+  from ref 128535 z 2001 label "Charge_Payment_Result" xyz 489 194 3000 to ref 130199
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 132375 transition_ref 136343 // Charge_Re-try
+  
+  from ref 128791 z 2006 label "Charge_Re-try" xyz 166 345 3000 to ref 132247
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 132887 transition_ref 136471 // Charge_Re-try_Accept
+  
+  from ref 132247 z 2011 label "Charge_Re-try_Accept" xyz 143 432 3000 to ref 129175
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 133015 transition_ref 136599 // Charge_Retry_Abandon
+  
+  from ref 132247 z 2001 label "Charge_Retry_Abandon" xyz 219.5 378 3000 to point 341 394
+  line 133143 z 2001 to point 341 481
+  line 133271 z 2001 to ref 129047
+  write_horizontally default show_definition default drawing_language default
+end
+end

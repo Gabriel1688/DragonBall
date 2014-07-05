@@ -1,0 +1,18 @@
+format 74
+
+usecasecanvas 128023 usecase_ref 128151 // Charge
+  xyzwh 275 129 3005 64 32 label_xy 286 161
+end
+note 128279 "Charge Proceduce"
+  xyzwh 56 32 2000 145 35
+usecasecanvas 128407 usecase_ref 128023 // Validity
+  xyzwh 117 130 3005 64 32 label_xy 129 162
+end
+usecasecanvas 128535 usecase_ref 128279 // Invoice
+  xyzwh 428 130 3005 64 32 label_xy 440 162
+end
+line 128663 --->
+  from ref 128407 z 3006 to ref 128023
+line 128791 ---> decenter_end 468
+  from ref 128023 z 3006 to ref 128535
+end

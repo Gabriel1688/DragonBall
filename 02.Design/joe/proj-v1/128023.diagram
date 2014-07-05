@@ -1,0 +1,46 @@
+format 74
+
+classcanvas 128151 class_ref 128023 // charger
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 119 90 2000
+end
+classcanvas 128535 class_ref 129175 // login_interface
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 301 100 2000
+end
+classcanvas 128663 class_ref 129559 // Login_Control
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 303 244 2000
+end
+classcanvas 128791 class_ref 129431 // Bank_Interface
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 85 245 2000
+end
+classcanvas 128919 class_ref 129303 // SysAdmin_Interface
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 489 247 2000
+end
+note 129047 "Interface_Class_Diagram"
+  xyzwh 116 31 2000 187 39
+relationcanvas 129175 relation_ref 128023 // login
+  from ref 128151 z 2001 label "login" italic xyz 222 112 3000 to ref 128535
+  no_role_a no_role_b
+  multiplicity_a_pos 272 136 3000 multiplicity_b_pos 181 136 3000
+end
+relationcanvas 129303 relation_ref 128151 // Audit
+  from ref 128663 z 2001 to point 345 201
+  line 129431 z 2001 label "Audit" italic xyz 332 183 3000 to ref 128535
+  no_role_a no_role_b
+  multiplicity_a_pos 319 164 3000 multiplicity_b_pos 330 222 3000
+end
+relationcanvas 129559 relation_ref 128279 // <aggregation>
+  from ref 128663 z 2001 to ref 128919
+  no_role_a no_role_b
+  multiplicity_a_pos 471 282 3000 multiplicity_b_pos 401 282 3000
+end
+relationcanvas 129687 relation_ref 128407 // <aggregation>
+  from ref 128663 z 2001 to ref 128791
+  no_role_a no_role_b
+  multiplicity_a_pos 191 281 3000 multiplicity_b_pos 285 281 3000
+end
+end
