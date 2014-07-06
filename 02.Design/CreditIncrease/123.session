@@ -1,13 +1,18 @@
 window_sizes 1920 1056 320 1594 862 120
 diagrams
-  usecasediagram_ref 128123 // CreditInc
+  active  usecasediagram_ref 128123 // CreditInc
     1594 862 190 4 48 22
-  active  sequencediagram_ref 134651 // Deposit
+  sequencediagram_ref 134651 // Deposit
     1275 689 100 4 0 0
+  usecasediagram_ref 141179 // Purchase
+    1275 689 100 4 0 0
+  sequencediagram_ref 141307 // Purchase
+    1275 689 100 4 108 0
 end
 show_stereotypes
-selected class_ref 134651 // BackEnd
+selected usecasediagram_ref 128123 // CreditInc
 open
   usecaseview_ref 128123 // Design
+  usecaseview_ref 134651 // Purchase
 end
 end

@@ -1,0 +1,164 @@
+format 74
+
+classinstance 128123 class_ref 141179 // User
+  name ""   xyz 122 4 2005 life_line_z 2000
+classinstance 128251 class_ref 141307 // Register
+  name ""   xyz 412 4 2005 life_line_z 2000
+classinstance 128379 class_ref 141435 // Terminals
+  name ""   xyz 243 8 2005 life_line_z 2000
+classinstance 128507 class_ref 141563 // Smart_Controller
+  name ""   xyz 524 4 2005 life_line_z 2000
+classinstance 128635 class_ref 134651 // BackEnd
+  name ""   xyz 683 4 2005 life_line_z 2000
+note 129147 "Swap card
+"
+  xyzwh 158 56 2020 89 35
+note 129659 "Get member card's balance
+"
+  xyzwh 313 121 2020 183 35
+note 130171 "Blance transaction
+"
+  xyzwh 601 191 2020 101 35
+note 130683 "Respond
+"
+  xyzwh 597 269 2020 97 35
+note 131195 "Respond
+"
+  xyzwh 298 324 2020 165 37
+note 131579 "Show Balance
+"
+  xyzwh 307 427 2020 109 35
+note 132091 "Input totlal purchase amount"
+  xyzwh 293 543 2020 131 65
+note 132603 "Purchase Transaction
+"
+  xyzwh 315 636 2020 169 35
+note 133883 "Show transaction result"
+  xyzwh 300 808 2020 157 35
+note 134267 "Print receipt"
+  xyzwh 296 922 2000 135 35
+durationcanvas 128763 classinstance_ref 128123 // :User
+  xyzwh 133 90 2010 11 40
+end
+durationcanvas 128891 classinstance_ref 128379 // :Terminals
+  xyzwh 272 90 2010 11 25
+end
+durationcanvas 129275 classinstance_ref 128379 // :Terminals
+  xyzwh 272 155 2010 11 40
+end
+durationcanvas 129403 classinstance_ref 128507 // :Smart_Controller
+  xyzwh 568 155 2010 11 25
+end
+durationcanvas 129787 classinstance_ref 128507 // :Smart_Controller
+  xyzwh 568 225 2010 11 41
+end
+durationcanvas 129915 classinstance_ref 128635 // :BackEnd
+  xyzwh 709 225 2010 11 26
+end
+durationcanvas 130299 classinstance_ref 128635 // :BackEnd
+  xyzwh 709 303 2010 11 40
+end
+durationcanvas 130427 classinstance_ref 128507 // :Smart_Controller
+  xyzwh 568 303 2010 11 25
+end
+durationcanvas 130811 classinstance_ref 128507 // :Smart_Controller
+  xyzwh 568 355 2010 11 40
+end
+durationcanvas 130939 classinstance_ref 128379 // :Terminals
+  xyzwh 272 355 2010 11 25
+end
+durationcanvas 131323 classinstance_ref 128379 // :Terminals
+  xyzwh 272 420 2010 11 40
+end
+durationcanvas 131707 classinstance_ref 128251 // :Register
+  xyzwh 433 534 2010 11 40
+end
+durationcanvas 131835 classinstance_ref 128379 // :Terminals
+  xyzwh 272 534 2010 11 25
+end
+durationcanvas 132219 classinstance_ref 128379 // :Terminals
+  xyzwh 272 659 2010 11 40
+end
+durationcanvas 132347 classinstance_ref 128507 // :Smart_Controller
+  xyzwh 568 640 2010 11 36
+end
+durationcanvas 132731 classinstance_ref 128507 // :Smart_Controller
+  xyzwh 568 715 2010 11 40
+end
+durationcanvas 132859 classinstance_ref 128635 // :BackEnd
+  xyzwh 709 715 2010 11 25
+end
+durationcanvas 133115 classinstance_ref 128635 // :BackEnd
+  xyzwh 709 801 2010 11 40
+end
+durationcanvas 133243 classinstance_ref 128507 // :Smart_Controller
+  xyzwh 568 801 2010 11 25
+end
+durationcanvas 133499 classinstance_ref 128507 // :Smart_Controller
+  xyzwh 568 842 2010 11 40
+end
+durationcanvas 133627 classinstance_ref 128379 // :Terminals
+  xyzwh 272 842 2010 11 25
+end
+durationcanvas 134011 classinstance_ref 128379 // :Terminals
+  xyzwh 272 908 2010 11 40
+end
+msg 129019 synchronous
+  from durationcanvas_ref 128763
+  to durationcanvas_ref 128891
+  yz 90 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129531 synchronous
+  from durationcanvas_ref 129275
+  to durationcanvas_ref 129403
+  yz 155 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130043 synchronous
+  from durationcanvas_ref 129787
+  to durationcanvas_ref 129915
+  yz 225 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130555 synchronous
+  from durationcanvas_ref 130299
+  to durationcanvas_ref 130427
+  yz 303 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131067 synchronous
+  from durationcanvas_ref 130811
+  to durationcanvas_ref 130939
+  yz 355 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+reflexivemsg 131451 synchronous
+  to durationcanvas_ref 131323
+  yz 420 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131963 synchronous
+  from durationcanvas_ref 131707
+  to durationcanvas_ref 131835
+  yz 534 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132475 synchronous
+  from durationcanvas_ref 132219
+  to durationcanvas_ref 132347
+  yz 665 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132987 synchronous
+  from durationcanvas_ref 132731
+  to durationcanvas_ref 132859
+  yz 715 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133371 synchronous
+  from durationcanvas_ref 133115
+  to durationcanvas_ref 133243
+  yz 801 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133755 synchronous
+  from durationcanvas_ref 133499
+  to durationcanvas_ref 133627
+  yz 842 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+reflexivemsg 134139 synchronous
+  to durationcanvas_ref 134011
+  yz 908 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end

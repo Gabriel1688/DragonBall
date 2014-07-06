@@ -2,16 +2,24 @@ format 74
 
 classcanvas 128123 class_ref 128123 // Casule_User
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 42.6 190.6 2000
+  xyz 42.4 190.4 2000
 end
 usecasecanvas 128763 usecase_ref 128251 // Credit increasing
-  xyzwh 239.9 160.4 3005 64 32 label_xy 226 192
+  xyzwh 239 159.5 3005 64 32 label_xy 226 192
 end
 usecasecanvas 130555 usecase_ref 135291 // Balance request
-  xyzwh 241.6 304.3 3005 64 32 label_xy 228 336
+  xyzwh 240.8 304.1 3005 64 32 label_xy 228 336
+end
+classcanvas 130811 class_ref 141563 // Smart_Controller
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 447.6 189.8 2000
 end
 line 128891 --->
   from ref 128123 z 3006 to ref 128763
 line 130683 --->
   from ref 128123 z 3006 to ref 130555
+line 130939 ----
+  from ref 128763 z 3006 to ref 130811
+line 131067 ----
+  from ref 130555 z 3006 to ref 130811
 end
