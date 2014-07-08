@@ -1,0 +1,421 @@
+format 74
+"Billing-v1" // Billing-v1
+  revision 1
+  modified_by 39 "juequ"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  usecaseview 128039 "Billing View"
+    //use case diagram settings
+    package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    usecase 128039 "Bill Amount Confirm"
+      //use case diagram settings
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+      //sequence diagram settings
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      //collaboration diagram settings
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      //class diagram settings
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      //object diagram settings
+       write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+      //state diagram settings
+      package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+      show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+      //activity diagram settings
+      package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+      show_infonote default drawing_language default show_stereotype_properties default
+      usecasediagram 128167 "Bill Amount Confirm Diagram"
+	package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+	size A4
+      end
+
+      state 128039 "Bill Amount State"
+	stereotype "machine"
+	statediagram 128551 "Bill Amount State Diagram"
+	  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations no shadow default
+	  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	  size A4
+	end
+
+	state 128807 "Welcome"
+	  transition 128167 "Input_amount"
+	    on state_ref 128423 // Amount Input
+	    external 
+	  end
+	end
+
+	state 128423 "Amount Input"
+	  transition 128295 "Ask for confirm"
+	    on state_ref 128935 // Amount Confirm Required
+	    external 
+	  end
+	end
+
+	state 128935 "Amount Confirm Required"
+	  transition 131751 "Client confirm"
+	    on state_ref 130727 // Amount Confimed
+	    external 
+	  end
+	end
+
+	state 130727 "Amount Confimed"
+	  transition 131879 "<transition>"
+	    on pseudostate_ref 128295 // choice
+	    external 
+	  end
+	end
+
+	state 128551 "Amount Confirmed"
+	  transition 128679 "<transition>"
+	    on pseudostate_ref 128167 // final
+	    external 
+	  end
+	end
+
+	state 128679 "Amount Cancled"
+	  transition 128935 "<transition>"
+	    on state_ref 128807 // Welcome
+	    external 
+	  end
+	end
+
+	pseudostate 128039 initial 
+	  transition 128039 "<transition>"
+	    on state_ref 128807 // Welcome
+	    external 
+	  end
+	end
+
+	pseudostate 128167 final 
+	end
+
+	pseudostate 128295 choice 
+	  transition 128551 "OK"
+	    on state_ref 128551 // Amount Confirmed
+	    external 
+	  end
+
+	  transition 128807 "Cancle"
+	    on state_ref 128679 // Amount Cancled
+	    external 
+	  end
+	end
+      end
+
+      sequencediagram 128679 "Bill Amount Confirm Sequence Diagram"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+    end
+
+    usecase 128167 "Bill Payment"
+      //use case diagram settings
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+      //sequence diagram settings
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      //collaboration diagram settings
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      //class diagram settings
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      //object diagram settings
+       write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+      //state diagram settings
+      package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+      show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+      //activity diagram settings
+      package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+      show_infonote default drawing_language default show_stereotype_properties default
+      usecasediagram 128295 "Bill Diagram"
+	package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+	size A4
+      end
+
+      state 128167 "Bill Payment State"
+	stereotype "machine"
+	statediagram 128807 "Bill Pay State Diagram"
+	  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+	  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	  size A4
+	end
+
+	state 129063 "IC_Card Required"
+	  transition 129191 "Get IC_Card"
+	    on state_ref 129191 // IC_Card Punched
+	    external 
+	  end
+	end
+
+	state 129191 "IC_Card Punched"
+	  transition 129319 "Send payment information"
+	    on state_ref 129319 // Payment Request Sent
+	    external 
+	  end
+	end
+
+	state 129319 "Payment Request Sent"
+	  transition 129447 "Get payment result"
+	    on state_ref 129447 // Payment Result Get
+	    external 
+	  end
+	end
+
+	state 129447 "Payment Result Get"
+	  transition 129575 "<transition>"
+	    on pseudostate_ref 128679 // choice
+	    external 
+	  end
+	end
+
+	state 129575 "IC_Card Accepted"
+	  transition 129959 "Amount Balance Result"
+	    on pseudostate_ref 128807 // choice
+	    external 
+	  end
+	end
+
+	state 129703 "IC_Card Rejected"
+	  transition 130471 "<transition>"
+	    on pseudostate_ref 128551 // final
+	    external 
+	  end
+	end
+
+	state 129831 "Payment Completed"
+	  transition 130215 "<transition>"
+	    on pseudostate_ref 128551 // final
+	    external 
+	  end
+	end
+
+	state 129959 "Payment Rejected"
+	  transition 130599 "<transition>"
+	    on pseudostate_ref 128551 // final
+	    external 
+	  end
+	end
+
+	pseudostate 128423 initial 
+	  transition 129063 "Ask for IC_Card"
+	    on state_ref 129063 // IC_Card Required
+	    external 
+	  end
+	end
+
+	pseudostate 128551 final 
+	end
+
+	pseudostate 128679 choice 
+	  transition 129703 "Negative"
+	    on state_ref 129703 // IC_Card Rejected
+	    external 
+	  end
+
+	  transition 129831 "Positive"
+	    on state_ref 129575 // IC_Card Accepted
+	    external 
+	  end
+	end
+
+	pseudostate 128807 choice 
+	  transition 130087 "Positive"
+	    on state_ref 129831 // Payment Completed
+	    external 
+	  end
+
+	  transition 130343 "Negative"
+	    on state_ref 129959 // Payment Rejected
+	    external 
+	  end
+	end
+      end
+
+      sequencediagram 128935 "Bill Payment Sequence Diagram"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+    end
+
+    usecase 128295 "Bill Receipt"
+      //use case diagram settings
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+      //sequence diagram settings
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      //collaboration diagram settings
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      //class diagram settings
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      //object diagram settings
+       write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+      //state diagram settings
+      package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+      show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+      //activity diagram settings
+      package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+      show_infonote default drawing_language default show_stereotype_properties default
+      usecasediagram 128423 "Bill Receipt Diagram"
+	package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+	size A4
+      end
+
+      state 128295 "Bill Receipt State"
+	stereotype "machine"
+	statediagram 129063 "Bill Receipt State Diagram"
+	  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+	  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	  size A4
+	end
+
+	state 130087 "Print Requirement Sent"
+	  transition 130855 "Client choose"
+	    on state_ref 130215 // Print Requirement confirmed
+	    external 
+	  end
+	end
+
+	state 130215 "Print Requirement confirmed"
+	  transition 130983 "<transition>"
+	    on pseudostate_ref 129191 // choice
+	    external 
+	  end
+	end
+
+	state 130343 "Print Required"
+	  transition 131239 "Print Bill or Failure Notice"
+	    on state_ref 130599 // Printed
+	    external 
+	  end
+	end
+
+	state 130471 "Print Cancled"
+	  transition 131623 "<transition>"
+	    on pseudostate_ref 129063 // final
+	    external 
+	  end
+	end
+
+	state 130599 "Printed"
+	  transition 131495 "<transition>"
+	    on pseudostate_ref 129063 // final
+	    external 
+	  end
+	end
+
+	pseudostate 128935 initial 
+	  transition 130727 "Send print requirement"
+	    on state_ref 130087 // Print Requirement Sent
+	    external 
+	  end
+	end
+
+	pseudostate 129063 final 
+	end
+
+	pseudostate 129191 choice 
+	  transition 131111 "OK"
+	    on state_ref 130343 // Print Required
+	    external 
+	  end
+
+	  transition 131367 "Cancle"
+	    on state_ref 130471 // Print Cancled
+	    external 
+	  end
+	end
+      end
+
+      sequencediagram 129447 "Bill Receipt Sequence Diagram"
+	show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+	overlapping_bars size A4
+      end
+    end
+
+    class 128039 "Client"
+      visibility package stereotype "actor"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 128167 "Terminal"
+      visibility package stereotype "interface"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}interface ${name}${extends} {
+${members}}
+"
+      php_decl "${comment}${visibility}interface ${name} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      
+    end
+
+    class 128295 "IC_Card"
+      visibility package stereotype "entity"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    usecasediagram 128039 "Billing Use Case Diagram"
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+      size A4
+    end
+  end
+end

@@ -1,0 +1,20 @@
+format 74
+
+note 128039 "Bill Receipt Diagram"
+  xyzwh 44 24 2000 151 37
+usecasecanvas 128167 usecase_ref 128295 // Bill Receipt
+  xyzwh 244 142 3005 64 32 label_xy 245 174
+end
+classcanvas 128295 class_ref 128039 // Client
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 115 126 2000
+end
+classcanvas 128423 class_ref 128167 // Terminal
+  class_drawing_mode interface show_context_mode default show_stereotype_properties default
+  xyz 387 135 2000
+end
+line 128551 ----
+  from ref 128295 z 3006 to ref 128167
+line 128679 ----
+  from ref 128167 z 3006 to ref 128423
+end

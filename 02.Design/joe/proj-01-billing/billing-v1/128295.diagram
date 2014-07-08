@@ -1,0 +1,26 @@
+format 74
+
+note 128039 "Bill Payment Diagram"
+  xyzwh 43 21 2000 165 41
+usecasecanvas 128167 usecase_ref 128167 // Bill Payment
+  xyzwh 280 149 3005 64 32 label_xy 278 181
+end
+classcanvas 128295 class_ref 128039 // Client
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 126 131 2000
+end
+classcanvas 128423 class_ref 128295 // IC_Card
+  class_drawing_mode entity show_context_mode default show_stereotype_properties default
+  xyz 448 142 2000
+end
+classcanvas 128551 class_ref 128167 // Terminal
+  class_drawing_mode interface show_context_mode default show_stereotype_properties default
+  xyz 284 47 3010
+end
+line 128807 ----
+  from ref 128295 z 3006 to ref 128167
+line 128935 ----
+  from ref 128551 z 3011 to ref 128167
+line 129063 ----
+  from ref 128167 z 3006 to ref 128423
+end

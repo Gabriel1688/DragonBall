@@ -1,0 +1,25 @@
+window_sizes 1161 672 364 791 478 120
+diagrams
+  statediagram_ref 128551 // Bill Amount State Diagram
+    752 455 100 4 0 0
+  statediagram_ref 128807 // Bill Pay State Diagram
+    616 382 100 4 0 5
+  statediagram_ref 129063 // Bill Receipt State Diagram
+    616 382 100 4 0 0
+  sequencediagram_ref 128679 // Bill Amount Confirm Sequence Diagram
+    632 382 100 4 0 0
+  usecasediagram_ref 128167 // Bill Amount Confirm Diagram
+    632 382 100 4 0 0
+  sequencediagram_ref 129447 // Bill Receipt Sequence Diagram
+    632 382 100 4 0 0
+  active  sequencediagram_ref 128935 // Bill Payment Sequence Diagram
+    791 478 100 4 0 0
+end
+show_stereotypes
+selected class_ref 128295 // IC_Card
+open
+  usecase_ref 128039 // Bill Amount Confirm
+  usecase_ref 128167 // Bill Payment
+  usecase_ref 128295 // Bill Receipt
+end
+end

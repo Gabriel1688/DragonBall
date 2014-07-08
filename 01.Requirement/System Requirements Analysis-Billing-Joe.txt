@@ -1,0 +1,45 @@
+1. General Requirements:
+1.1 This is a IC-Card payment system. The system is based on C/S structure, it contains a database server, several targets, & a lot of terminals.
+1.2 The Database Server is a web based Python server, it transfers the XML data sheets with targets through network.
+1.3 A Target(Tiny4412) is a rich client, it is used to register & charge IC-Card, and inquire the IC-Card information.
+    A target can swap data with the server and the terminals which are connected to itself (through CAN, USB, NETWORK).
+1.4 A Terminal is a thin client, people can only pay the bill through IC-Card with it.
+    A terminal can only swap the data with the target it connect with (through CAN, USB, NETWORK), it can NOT be connected to the server directly.
+1.5 IC-Card: registering, charging (CreditCard) and inquiry with Target; billing with Terminal. 
+
+
+2. Billing Part
+2.1 Billing requirements
+a. Clients can only pay bill with IC-Card through the terminal.
+b. Clinets input the bill amount on the terminal and confirm the amount themselves.
+c. The Terminal should verify the IC-Card Validity & Balance Sufficiency before each payment.
+d. The Terminal should print a receipt for every successful payment.
+
+2.2 Billing solution
+When a client wants to pay the bill, he/she can do it on the terminal himself. 
+Stage 1. Bill Amount confirmation:
+Step 1. The terminal shows a welcome screen, and asks the client to input the bill amount.
+Step 2. The client inputs the bill amount and press "OK"(by keyboard or touchscreen).
+Step 3. The terminal gets the bill amout, then displays the Bill Amount Confirmation screen for client to confirm.
+- If the client press "OK", then go to step4, when press "Cancle", go back to step 1.
+
+Stage 2. IC-Card Validity Verification & Balance Check
+Step 4. The terminal displays a screen to let the client punch his/her IC-Card.
+Step 5. The client punches his/her IC-Card, the terminal sends the IC-Card info. & the Bill Amount to Target(Tiny4412) for validity verification & balance check. The Target replies the result.
+Step 6. 
+Step 6.1 If the validity verification result is negative, the terminal shows an IC-Card error message, then goes back to Step 4.
+Step 6.2 If the validity verification result is positive, the terminal shows an IC-Card Accepted windows.
+Step 7. (based on step 6.2)
+Step 7.1 If the Bill Amount check result is negative, the terminal shows a Balance Un-sufficient and Bill Payment Failure window.
+Step 7.2 If the Bill Amount check result is positive, the terminal shows a Bill Payment Success windows.
+
+Stage 3. Print
+Step 8. (based on step 7.1) 
+The terminal displays a screen to ask whether a Failure Notice is required.
+- If the client press "OK", then the terminal print a Failure Notice & go to step 1; for "Cancle", go back to step 1 without printing.
+Step 9. (based on step 7.2)
+The terminal displays a screen to ask whether a Payment Receipt is required.
+- If the client press "OK", then the terminal print a Payment Receipt & go to step 1; for "Cancle", go back to step 1 without printing.
+
+---Version 1---Jul08,2014---By Joe---
+
