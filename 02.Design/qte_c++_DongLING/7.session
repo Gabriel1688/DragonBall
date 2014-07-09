@@ -1,0 +1,11 @@
+window_sizes 1280 672 198 1076 478 120
+diagrams
+  active  usecasediagram_ref 128135 // user_card-reader
+    1076 478 100 4 31 0
+end
+show_stereotypes
+selected usecasediagram_ref 128135 // user_card-reader
+open
+  usecaseview_ref 128135 // user_system
+end
+end
