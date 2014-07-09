@@ -1,0 +1,18 @@
+format 74
+
+classcanvas 128251 class_ref 141179 // User
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 74 217 2000
+end
+usecasecanvas 128379 usecase_ref 141819 // Purchase staff
+  xyzwh 258 131 3005 64 32 label_xy 252 163
+end
+classcanvas 128635 class_ref 141307 // Register
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 468 226 2000
+end
+line 128507 --->
+  from ref 128251 z 3006 to ref 128379
+line 128763 ----
+  from ref 128379 z 3006 to ref 128635
+end
