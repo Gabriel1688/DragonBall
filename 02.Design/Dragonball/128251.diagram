@@ -1,0 +1,52 @@
+format 74
+
+classcanvas 128123 class_ref 128123 // User
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 17 222 2000
+end
+subject 128251 ""
+  color verylightgray  xyzwh 149 13 2000 404 206
+usecasecanvas 128379 usecase_ref 128123 // Charging
+  xyzwh 193 90 3005 64 32 label_xy 198 122
+end
+usecasecanvas 128635 usecase_ref 128251 // Charging by Binder account
+  xyzwh 365 24 3005 64 32 label_xy 320 56
+end
+usecasecanvas 128891 usecase_ref 128379 // Charging by Credit card
+  xyzwh 364 152 3005 64 32 label_xy 330 183
+end
+subject 129147 ""
+  color blue  xyzwh 150 222 2000 404 177
+usecasecanvas 129275 usecase_ref 128507 // Inquire
+  xyzwh 198 262 3005 70 35 label_xy 211 296
+end
+usecasecanvas 129531 usecase_ref 128635 // Inquire balance
+  xyzwh 400 233 3005 70 35 label_xy 389 267
+end
+usecasecanvas 129787 usecase_ref 128763 // Inqure records
+  xyzwh 307 340 3005 70 35 label_xy 299 374
+end
+subject 130043 ""
+  xyzwh 151 413 2000 404 131
+usecasecanvas 130171 usecase_ref 128891 // Binder
+  xyzwh 225 445 3005 64 32 label_xy 238 477
+end
+line 128507 ----
+  from ref 128123 z 3006 to ref 128379
+simplerelationcanvas 128763 simplerelation_ref 128123
+  from ref 128379 z 3006 stereotype "<<include>>" xyz 275.5 70 3000 to ref 128635
+end
+simplerelationcanvas 129019 simplerelation_ref 128251
+  from ref 128379 z 3006 stereotype "<<include>>" xyz 275 135 3000 to ref 128891
+end
+line 129403 ----
+  from ref 129275 z 3006 to ref 128123
+simplerelationcanvas 129659 simplerelation_ref 128379
+  from ref 129275 z 3006 stereotype "<<include>>" xyz 298.5 263 3000 to ref 129531
+end
+simplerelationcanvas 129915 simplerelation_ref 128507
+  from ref 129275 z 3006 stereotype "<<include>>" xyz 252 317 3000 to ref 129787
+end
+line 130299 ----
+  from ref 128123 z 3006 to ref 130171
+end
