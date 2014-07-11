@@ -1,0 +1,13 @@
+window_sizes 1920 1056 493 1421 862 120
+diagrams
+  usecasediagram_ref 128251 // Use case
+    1136 689 120 4 0 0
+  active  sequencediagram_ref 128023 // Charging Sequenece
+    1421 862 100 4 228 0
+end
+show_stereotypes
+selected usecase_ref 128123 // Charging
+open
+  usecaseview_ref 128251 // UserCase
+end
+end

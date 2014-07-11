@@ -1,0 +1,131 @@
+format 74
+
+classinstance 128023 class_ref 128123 // User
+  name ""   xyz 89 4 2005 life_line_z 2000
+classinstance 128407 class_ref 128151 // Charging
+  name ""   xyz 338 4 2005 life_line_z 2000
+classinstance 128535 class_ref 128279 // Backend
+  name ""   xyz 599 4 2005 life_line_z 2000
+note 129047 "Swap/Input Member card
+"
+  xyzwh 160 51 2020 181 35
+note 129559 "Validate member card"
+  xyzwh 407 99 2020 169 35
+note 130071 "Respond member card status
+"
+  xyzwh 405 178 2020 193 35
+note 131095 "Show Info,waiting for action from User"
+  xyzwh 385 283 2000 161 35
+continuation 131223 "Binder?"
+  xyzwh 268 353 2005 86 32
+note 131735 "Swap card/Input Credit card number"
+  xyzwh 157 398 2020 175 57
+note 132247 "Input Charging amount"
+  xyzwh 154 496 2000 185 35
+note 132631 "Show agreement,waiting for confirm"
+  xyzwh 382 599 2000 195 51
+note 133143 "Charging transaction"
+  xyzwh 409 683 2020 165 35
+note 133655 "Respon from Backend"
+  xyzwh 411 766 2020 179 35
+note 134039 "Show result,if success, print the receipt"
+  xyzwh 385 871 2000 191 55
+durationcanvas 128663 classinstance_ref 128023 // :User
+  xyzwh 100 83 2010 11 40
+end
+durationcanvas 128791 classinstance_ref 128407 // :Charging
+  xyzwh 365 83 2010 11 25
+end
+durationcanvas 129175 classinstance_ref 128407 // :Charging
+  xyzwh 365 138 2010 11 40
+end
+durationcanvas 129303 classinstance_ref 128535 // :Backend
+  xyzwh 621 138 2010 11 25
+end
+durationcanvas 129687 classinstance_ref 128535 // :Backend
+  xyzwh 621 209 2010 11 40
+end
+durationcanvas 129815 classinstance_ref 128407 // :Charging
+  xyzwh 365 209 2010 11 25
+end
+durationcanvas 130839 classinstance_ref 128407 // :Charging
+  xyzwh 365 266 2010 11 40
+end
+durationcanvas 131351 classinstance_ref 128023 // :User
+  xyzwh 100 387 2010 11 40
+end
+durationcanvas 131479 classinstance_ref 128407 // :Charging
+  xyzwh 365 387 2010 11 25
+end
+durationcanvas 131863 classinstance_ref 128023 // :User
+  xyzwh 100 533 2010 11 40
+end
+durationcanvas 131991 classinstance_ref 128407 // :Charging
+  xyzwh 365 533 2010 11 25
+end
+durationcanvas 132375 classinstance_ref 128407 // :Charging
+  xyzwh 365 585 2010 11 40
+end
+durationcanvas 132759 classinstance_ref 128407 // :Charging
+  xyzwh 365 711 2010 11 40
+end
+durationcanvas 132887 classinstance_ref 128535 // :Backend
+  xyzwh 621 699 2010 11 34
+end
+durationcanvas 133271 classinstance_ref 128535 // :Backend
+  xyzwh 621 794 2010 11 40
+end
+durationcanvas 133399 classinstance_ref 128407 // :Charging
+  xyzwh 365 794 2010 11 25
+end
+durationcanvas 133783 classinstance_ref 128407 // :Charging
+  xyzwh 365 852 2010 11 40
+end
+msg 128919 synchronous
+  from durationcanvas_ref 128663
+  to durationcanvas_ref 128791
+  yz 83 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129431 synchronous
+  from durationcanvas_ref 129175
+  to durationcanvas_ref 129303
+  yz 138 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129943 synchronous
+  from durationcanvas_ref 129687
+  to durationcanvas_ref 129815
+  yz 209 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+reflexivemsg 130967 synchronous
+  to durationcanvas_ref 130839
+  yz 266 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131607 synchronous
+  from durationcanvas_ref 131351
+  to durationcanvas_ref 131479
+  yz 387 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132119 synchronous
+  from durationcanvas_ref 131863
+  to durationcanvas_ref 131991
+  yz 533 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+reflexivemsg 132503 synchronous
+  to durationcanvas_ref 132375
+  yz 585 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133015 synchronous
+  from durationcanvas_ref 132759
+  to durationcanvas_ref 132887
+  yz 716 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133527 synchronous
+  from durationcanvas_ref 133271
+  to durationcanvas_ref 133399
+  yz 794 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+reflexivemsg 133911 asynchronous
+  to durationcanvas_ref 133783
+  yz 853 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end
