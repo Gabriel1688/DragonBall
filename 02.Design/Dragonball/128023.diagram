@@ -81,6 +81,9 @@ end
 durationcanvas 133783 classinstance_ref 128407 // :Charging
   xyzwh 365 852 2010 11 40
 end
+durationcanvas 134167 classinstance_ref 128407 // :Charging
+  xyzwh 365 454 2010 11 40
+end
 msg 128919 synchronous
   from durationcanvas_ref 128663
   to durationcanvas_ref 128791
@@ -127,5 +130,9 @@ msg 133527 synchronous
 reflexivemsg 133911 asynchronous
   to durationcanvas_ref 133783
   yz 853 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+reflexivemsg 134295 synchronous
+  to durationcanvas_ref 134167
+  yz 454 2015 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
 end
