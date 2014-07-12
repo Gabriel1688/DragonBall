@@ -1,0 +1,27 @@
+format 74
+
+classcanvas 128002 class_ref 128002 // client
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 102 148 2000
+end
+usecasecanvas 128100 usecase_ref 128100 // receive recipt
+  xyzwh 259 349 3005 64 32 label_xy 254 381
+end
+usecasecanvas 128386 usecase_ref 128258 // inquiry user information
+  xyzwh 302 58 3005 64 32 label_xy 261 90
+end
+usecasecanvas 128514 usecase_ref 128386 // inquiry balance
+  xyzwh 327 153 3005 64 32 label_xy 314 185
+end
+usecasecanvas 128642 usecase_ref 128514 // inquiry transaction history
+  xyzwh 292 244 3010 64 32 label_xy 248 277
+end
+line 128228 ----
+  from ref 128002 z 3006 to ref 128100
+line 128770 ----
+  from ref 128002 z 3011 to ref 128642
+line 128898 ----
+  from ref 128002 z 3006 to ref 128514
+line 129026 ----
+  from ref 128002 z 3006 to ref 128386
+end
