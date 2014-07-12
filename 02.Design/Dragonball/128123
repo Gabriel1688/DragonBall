@@ -411,6 +411,22 @@ ${inlines}
 	
 	
       end
+
+      operation 128791 "Write"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "priority" explicit_type "Proiority"
+	  param in name "message" explicit_type "const string &"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}const ${t0} & ${p0}, const ${t1} & ${p1}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}const ${t0} & ${p0}, const ${t1} & ${p1}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
     end
   end
 end
