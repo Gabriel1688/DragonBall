@@ -1,7 +1,16 @@
 window_sizes 1920 1056 493 1421 862 120
+diagrams
+  classdiagram_ref 134679 // log file
+    1136 689 100 4 0 0
+  active  classdiagram_ref 134551 // Charging
+    1421 862 100 4 0 0
+end
 show_stereotypes
-selected usecase_ref 128123 // Charging
+selected operation_ref 142615 // Process
 open
-  usecaseview_ref 128251 // UserCase
+  class_ref 141335 // Charger
+  class_ref 141463 // Service
+  class_ref 141591 // TcpService
+  class_ref 141719 // XmlService
 end
 end
