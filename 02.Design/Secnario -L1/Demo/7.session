@@ -1,0 +1,12 @@
+window_sizes 1280 672 320 954 478 120
+diagrams
+  active  usecasediagram_ref 135295 // Use Case Diagram1
+    763 382 100 4 847 0
+end
+show_stereotypes
+selected deploymentview_ref 128255 // deployment view
+open
+  classview_ref 128255 // Class View
+  usecaseview_ref 128255 // Use Case view
+end
+end

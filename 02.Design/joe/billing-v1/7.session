@@ -1,0 +1,15 @@
+window_sizes 1280 672 312 962 478 120
+diagrams
+  statediagram_ref 128551 // Bill Amount State Diagram
+    769 382 100 4 0 0
+  sequencediagram_ref 128679 // Bill Amount Confirm Sequence Diagram
+    769 382 100 4 429 0
+  active  usecasediagram_ref 128039 // Billing Use Case Diagram
+    962 478 100 4 0 0
+end
+show_stereotypes
+selected usecasediagram_ref 128039 // Billing Use Case Diagram
+open
+  state_ref 128039 // Bill Amount State
+end
+end
