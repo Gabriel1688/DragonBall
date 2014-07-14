@@ -1,6 +1,6 @@
 format 74
 "billing"
-  revision 7
+  revision 11
   modified_by 123 "antoine"
 
 
@@ -70,6 +70,91 @@ ${inlines}
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 128379 // <aggregation>
+	relation 128379 o---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 128379 // <aggregation>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 128507 // <aggregation>
+      end
+
+      attribute 134651 "protocolType"
+	protected explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	comment "01:TCP
+10:CAN
+11:485"
+      end
+
+      classrelation 137083 // <composition>
+	relation_ref 136187 // <composition>
+      end
+
+      classrelation 137211 // <composition>
+	relation 136315 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 137211 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 137339 // <composition>
+      end
+
+      classrelation 137467 // <composition>
+	relation 136443 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 137467 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 137595 // <composition>
+      end
+
+      classrelation 137723 // <composition>
+	relation 136571 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 137723 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 137851 // <composition>
+      end
+
+      operation 141307 "pack"
+	private explicit_return_type "char"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 145787 // <composition>
+	relation 143995 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 145787 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 145915 // <composition>
+      end
     end
 
     usecase 128251 "billing"
@@ -141,6 +226,25 @@ ${inlines}
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 128763 // <association>
+	relation_ref 128507 // <association>
+      end
+
+      classrelation 129019 // <aggregation>
+	relation_ref 128635 // <aggregation>
+      end
+
+      classrelation 129275 // <aggregation>
+	relation_ref 128763 // <aggregation>
+      end
+
+      classrelation 129531 // <aggregation>
+	relation_ref 128891 // <aggregation>
+      end
+
+      classrelation 129915 // <aggregation>
+	relation_ref 129147 // <aggregation>
+      end
     end
 
     classinstance 134651 "Payment"
@@ -166,8 +270,655 @@ ${inlines}
     end
 
     classdiagram 141307 "Billing class"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-      size A4
+      draw_all_relations no hide_attributes default hide_operations no hide_getset_operations default show_members_full_definition yes show_members_visibility default show_members_stereotype yes show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A3
+    end
+
+    class 141563 "Service"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 141691 "TcpService"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128123 // <generalisation>
+	relation 128123 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 128123 // <generalisation>
+	  b parent class_ref 141563 // Service
+      end
+
+      classrelation 128891 // <aggregation>
+	relation 128635 o---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 128891 // <aggregation>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 129019 // <aggregation>
+      end
+
+      classrelation 129787 // <aggregation>
+	relation 129147 o---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 129787 // <aggregation>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 129915 // <aggregation>
+      end
+    end
+
+    class 141819 "Thread"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 141947 "DataReceiveThread"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128251 // <generalisation>
+	relation 128251 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 128251 // <generalisation>
+	  b parent class_ref 141819 // Thread
+      end
+
+      classrelation 128507 // <aggregation>
+	relation_ref 128379 // <aggregation>
+      end
+
+      classrelation 128635 // <association>
+	relation 128507 ----
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 128635 // <association>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 128763 // <association>
+      end
+
+      classrelation 152443 // <aggregation>
+	relation 150523 o---
+	  a role_name "" multiplicity "1..*" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 152443 // <aggregation>
+	  b role_name "" multiplicity "1" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 152571 // <aggregation>
+      end
+
+      classrelation 152699 // <aggregation>
+	relation 150651 o---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 152699 // <aggregation>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 152827 // <aggregation>
+      end
+
+      classrelation 153083 // <aggregation>
+	relation_ref 150779 // <aggregation>
+      end
+
+      classrelation 153339 // <aggregation>
+	relation_ref 150907 // <aggregation>
+      end
+
+      classrelation 153595 // <aggregation>
+	relation_ref 151035 // <aggregation>
+      end
+
+      classrelation 153723 // <aggregation>
+	relation 151163 o---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 153723 // <aggregation>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 153851 // <aggregation>
+      end
+    end
+
+    class 142075 "Display"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129147 // <aggregation>
+	relation 128763 o---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 129147 // <aggregation>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 129275 // <aggregation>
+      end
+
+      classrelation 129659 // <generalisation>
+	relation 129019 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 129659 // <generalisation>
+	  b parent class_ref 142203 // Terminal
+      end
+    end
+
+    class 142203 "Terminal"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129403 // <aggregation>
+	relation 128891 o---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 129403 // <aggregation>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 129531 // <aggregation>
+      end
+    end
+
+    class 142331 "TCPData"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 130043 // <generalisation>
+	relation 129275 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 130043 // <generalisation>
+	  b parent class_ref 128251 // FrontendData
+      end
+
+      classrelation 153211 // <aggregation>
+	relation 150907 o---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 153211 // <aggregation>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 153339 // <aggregation>
+      end
+    end
+
+    class 142459 "CANData"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 130171 // <generalisation>
+	relation 129403 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 130171 // <generalisation>
+	  b parent class_ref 128251 // FrontendData
+      end
+
+      classrelation 144635 // <unidirectional association>
+	relation 143355 --->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 144635 // <unidirectional association>
+	  b parent class_ref 141819 // Thread
+      end
+
+      classrelation 153467 // <aggregation>
+	relation 151035 o---
+	  a role_name "" multiplicity "1" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 153467 // <aggregation>
+	  b role_name "" multiplicity "1..*" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 153595 // <aggregation>
+      end
+    end
+
+    class 142587 "485Data"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 130299 // <generalisation>
+	relation 129531 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 130299 // <generalisation>
+	  b parent class_ref 128251 // FrontendData
+      end
+
+      classrelation 152571 // <aggregation>
+	relation_ref 150523 // <aggregation>
+      end
+
+      classrelation 152827 // <aggregation>
+	relation_ref 150651 // <aggregation>
+      end
+
+      classrelation 152955 // <aggregation>
+	relation 150779 o---
+	  a role_name "" multiplicity "1" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 152955 // <aggregation>
+	  b role_name "" multiplicity "*" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 153083 // <aggregation>
+      end
+    end
+
+    class 149115 "Logger"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 136827 // <generalisation>
+	relation 136059 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 136827 // <generalisation>
+	  b parent class_ref 142203 // Terminal
+      end
+    end
+
+    class 149243 "CardInfo"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 134779 "idNum"
+	protected explicit_type "int"
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 134651 "GetID"
+	public explicit_return_type "char"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      attribute 134907 "name"
+	protected explicit_type "char"
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135035 "date"
+	private explicit_type "int"
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 141563 "status"
+	private explicit_type "bool"
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	comment "0:ok
+1:expired"
+      end
+
+      attribute 148219 "bindNum"
+	private explicit_type "int"
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+    end
+
+    class 149371 "Client"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 136955 // <composition>
+	relation 136187 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 136955 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 137083 // <composition>
+      end
+
+      classrelation 137595 // <composition>
+	relation_ref 136443 // <composition>
+      end
+
+      classrelation 137979 // <generalisation>
+	relation 136699 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 137979 // <generalisation>
+	  b parent class_ref 149243 // CardInfo
+      end
+
+      classrelation 145147 // <composition>
+	relation_ref 143611 // <composition>
+      end
+    end
+
+    class 149499 "CreditCard"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 137339 // <composition>
+	relation_ref 136315 // <composition>
+      end
+
+      classrelation 138107 // <generalisation>
+	relation 136827 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 138107 // <generalisation>
+	  b parent class_ref 149243 // CardInfo
+      end
+
+      classrelation 145403 // <composition>
+	relation_ref 143739 // <composition>
+      end
+    end
+
+    class 149627 "Machine"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 137851 // <composition>
+	relation_ref 136571 // <composition>
+      end
+
+      classrelation 145659 // <composition>
+	relation_ref 143867 // <composition>
+      end
+
+      attribute 141691 "machineID"
+	private explicit_type "char"
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 141563 "getID"
+	public explicit_return_type "char"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 156155 "Data"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 144763 // <composition>
+	relation 143483 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 144763 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 144891 // <composition>
+      end
+
+      classrelation 144891 // <composition>
+	relation_ref 143483 // <composition>
+      end
+
+      classrelation 145019 // <composition>
+	relation 143611 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 145019 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 145147 // <composition>
+      end
+
+      classrelation 145275 // <composition>
+	relation 143739 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 145275 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 145403 // <composition>
+      end
+
+      classrelation 145531 // <composition>
+	relation 143867 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 145531 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 145659 // <composition>
+      end
+
+      classrelation 145915 // <composition>
+	relation_ref 143995 // <composition>
+      end
+
+      operation 141435 "getData"
+	public explicit_return_type "char"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 162683 "ThreadPool"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 153851 // <aggregation>
+	relation_ref 151163 // <aggregation>
+      end
     end
   end
 end
