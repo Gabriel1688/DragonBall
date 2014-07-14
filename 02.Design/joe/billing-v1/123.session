@@ -1,0 +1,19 @@
+window_sizes 1301 640 232 1063 446 120
+diagrams
+  usecasediagram_ref 128039 // Billing Use Case Diagram
+    850 356 100 4 0 0
+  sequencediagram_ref 128679 // Bill Amount Confirm Sequence Diagram
+    850 356 100 4 0 0
+  sequencediagram_ref 128935 // Bill Payment Sequence Diagram
+    850 356 100 4 288 0
+  active  sequencediagram_ref 129447 // Bill Receipt Sequence Diagram
+    850 356 100 4 48 0
+end
+show_stereotypes
+selected sequencediagram_ref 129447 // Bill Receipt Sequence Diagram
+open
+  usecase_ref 128039 // Bill Amount Confirm
+  usecase_ref 128167 // Bill Payment
+  usecase_ref 128295 // Bill Receipt
+end
+end

@@ -1,0 +1,14 @@
+window_sizes 1301 640 232 1063 446 120
+diagrams
+  usecasediagram_ref 128251 // Use case
+    1063 446 100 4 144 0
+  active  sequencediagram_ref 128023 // Charging Sequenece
+    850 356 100 4 0 0
+end
+show_stereotypes
+selected sequencediagram_ref 128023 // Charging Sequenece
+open
+  usecase_ref 128123 // Charging
+  usecase_ref 128507 // Inquire
+end
+end

@@ -1,0 +1,31 @@
+format 74
+
+classcanvas 128123 class_ref 128251 // FrontendData
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 173 116 2000
+end
+usecasecanvas 128251 usecase_ref 128251 // billing
+  xyzwh 368 133 3005 63 33 label_xy 383 165
+end
+classcanvas 128379 class_ref 128379 // backend
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 643 118 2000
+end
+usecasecanvas 128763 usecase_ref 134779 // terminal
+  xyzwh 370 208 3005 63 33 label_xy 380 240
+end
+note 129019 "frontend data decide how to show data,print or lcd"
+  xyzwh 351 261 2000 151 65
+note 129147 "frontenddata is the data receive from different interface protocol such as, tcp, can,485,etc."
+  xyzwh 37 97 2000 135 107
+subject 129275 ""
+  xyzwh 278 87 2000 280 263
+note 129403 "smart controller"
+  xyzwh 355 94 3011 113 35
+line 128507 ----
+  from ref 128123 z 3006 to ref 128251
+line 128635 ----
+  from ref 128251 z 3006 to ref 128379
+line 128891 ----
+  from ref 128123 z 3006 to ref 128763
+end
