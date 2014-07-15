@@ -1,0 +1,13 @@
+window_sizes 960 672 291 663 478 120
+diagrams
+  sequencediagram_ref 134628 // sequence_search
+    574 382 100 4 0 0
+  active  sequencediagram_ref 141284 // sequence_enquiry_enquiry3
+    530 382 100 4 136 0
+end
+show_stereotypes
+selected class_ref 134628 // BackEnd
+open
+  usecaseview_ref 128002 // uc_view_search
+end
+end
