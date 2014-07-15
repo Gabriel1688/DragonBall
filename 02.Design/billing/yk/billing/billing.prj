@@ -1,6 +1,6 @@
 format 74
 "billing"
-  revision 11
+  revision 13
   modified_by 123 "antoine"
 
 
@@ -134,16 +134,6 @@ ${inlines}
 	    classrelation_ref 137851 // <composition>
       end
 
-      operation 141307 "pack"
-	private explicit_return_type "char"
-	nparams 0
-	
-	
-	
-	
-	
-      end
-
       classrelation 145787 // <composition>
 	relation 143995 *---
 	  a role_name "" private
@@ -154,6 +144,16 @@ ${inlines}
 	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
 "
 	    classrelation_ref 145915 // <composition>
+      end
+
+      operation 148091 "getData"
+	public return_type class_ref 156155 // Data
+	nparams 0
+	
+	
+	
+	
+	
       end
     end
 
@@ -214,7 +214,7 @@ ${inlines}
       overlapping_bars size A4
     end
 
-    class 134907 "Payment"
+    class 134907 "Billing"
       visibility package 
       cpp_decl "${comment}${template}class ${name}${inherit} {
 ${members}};
@@ -245,10 +245,79 @@ ${inlines}
       classrelation 129915 // <aggregation>
 	relation_ref 129147 // <aggregation>
       end
+
+      attribute 148347 "clientData"
+	private type class_ref 149371 // Client
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 148475 "creditData"
+	private type class_ref 149499 // CreditCard
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 148603 "machineData"
+	private type class_ref 149627 // Machine
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 155259 "compareAmount"
+	public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 155387 "delay"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "time" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      attribute 148731 "billingData"
+	private type class_ref 156155 // Data
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
     end
 
     classinstance 134651 "Payment"
-      type class_ref 134907 // Payment
+      type class_ref 134907 // Billing
       attributes
         end
       relations
@@ -432,7 +501,7 @@ ${inlines}
       end
     end
 
-    class 142075 "Display"
+    class 142075 "Printer"
       visibility package 
       cpp_decl "${comment}${template}class ${name}${inherit} {
 ${members}};
@@ -461,11 +530,23 @@ ${inlines}
 	  a public
 	    cpp default "${type}"
 	    classrelation_ref 129659 // <generalisation>
-	  b parent class_ref 142203 // Terminal
+	  b parent class_ref 142203 // TerminalOutput
+      end
+
+      classrelation 160891 // <aggregation>
+	relation 157947 o---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 160891 // <aggregation>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 161019 // <aggregation>
       end
     end
 
-    class 142203 "Terminal"
+    class 142203 "TerminalOutput"
       visibility package 
       cpp_decl "${comment}${template}class ${name}${inherit} {
 ${members}};
@@ -487,6 +568,41 @@ ${inlines}
 	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
 "
 	    classrelation_ref 129531 // <aggregation>
+      end
+
+      classrelation 160379 // <aggregation>
+	relation 157691 o---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 160379 // <aggregation>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 160507 // <aggregation>
+      end
+
+      classrelation 160763 // <aggregation>
+	relation_ref 157819 // <aggregation>
+      end
+
+      classrelation 161019 // <aggregation>
+	relation_ref 157947 // <aggregation>
+      end
+
+      operation 155515 "write"
+	public explicit_return_type "bool"
+	nparams 1
+	  param in name "type" explicit_type "char"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
       end
     end
 
@@ -623,7 +739,23 @@ ${inlines}
 	  a public
 	    cpp default "${type}"
 	    classrelation_ref 136827 // <generalisation>
-	  b parent class_ref 142203 // Terminal
+	  b parent class_ref 142203 // TerminalOutput
+      end
+
+      classrelation 160507 // <aggregation>
+	relation_ref 157691 // <aggregation>
+      end
+
+      classrelation 160635 // <aggregation>
+	relation 157819 o---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 160635 // <aggregation>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 160763 // <aggregation>
       end
     end
 
@@ -684,18 +816,6 @@ ${inlines}
       end
 
       attribute 141563 "status"
-	private explicit_type "bool"
-	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
-"
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	comment "0:ok
-1:expired"
-      end
-
-      attribute 148219 "bindNum"
 	private explicit_type "int"
 	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
 "
@@ -703,6 +823,53 @@ ${inlines}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+	comment "0:ok
+1:expired
+2:...
+3:...
+"
+      end
+
+      operation 148475 "getName"
+	public explicit_return_type "char"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 148603 "getStatus"
+	public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 148731 "getDate"
+	public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
       end
     end
 
@@ -819,6 +986,20 @@ ${inlines}
 	
 	
       end
+
+      attribute 148219 "status"
+	private explicit_type ""
+	init_value "int"
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	comment "0:billing
+1:charging
+2:"
+      end
     end
 
     class 156155 "Data"
@@ -889,8 +1070,36 @@ ${inlines}
 	relation_ref 143995 // <composition>
       end
 
-      operation 141435 "getData"
-	public explicit_return_type "char"
+      operation 141435 "getClientData"
+	public return_type class_ref 149371 // Client
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 148219 "getCreditCardData"
+	public return_type class_ref 149499 // CreditCard
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 148347 "getMachineData"
+	public return_type class_ref 149627 // Machine
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
 "

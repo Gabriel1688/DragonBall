@@ -9,26 +9,25 @@ classinstancecanvas 128379 classinstance_ref 134651 // Payment
 end
 classinstance 128507 class_ref 135035 // terminal
   name ""   xyz 586 4 2005 life_line_z 2000
+note 130939 "add sth to show the judge"
+  xyzwh 636 158 2000 139 61
 durationcanvas 128635 classinstance_ref 128123 // :FrontendData
   xyzwh 137 70 2010 11 40
 end
-durationcanvas 128763 classinstance_ref 128379 // Payment:Payment
-  xyzwh 294 70 2010 11 25
+durationcanvas 128763 classinstance_ref 128379 // Payment:Billing
+  xyzwh 287 70 2010 11 25
 end
 durationcanvas 129019 classinstance_ref 128251 // :backend
   xyzwh 491 78 2010 11 25
 end
-durationcanvas 129659 classinstance_ref 128251 // :backend
-  xyzwh 491 141 2010 11 40
-end
-durationcanvas 129787 classinstance_ref 128379 // Payment:Payment
-  xyzwh 294 141 2010 11 25
-end
-durationcanvas 130043 classinstance_ref 128379 // Payment:Payment
-  xyzwh 294 210 2010 11 40
+durationcanvas 130043 classinstance_ref 128379 // Payment:Billing
+  xyzwh 287 170 2010 11 41
 end
 durationcanvas 130171 classinstance_ref 128507 // :terminal
-  xyzwh 610 210 2010 11 25
+  xyzwh 610 165 2010 11 50
+end
+durationcanvas 130683 classinstance_ref 128379 // Payment:Billing
+  xyzwh 287 114 2010 11 40
 end
 msg 128891 asynchronous
   from durationcanvas_ref 128635
@@ -43,16 +42,15 @@ msg 129147 asynchronous
   show_full_operations_definition default drawing_language default show_context_mode default
   args "account"
   label_xy 329 61
-msg 129915 asynchronous
-  from durationcanvas_ref 129659
-  to durationcanvas_ref 129787
-  yz 141 2015 explicitmsg "response to the balance"
-  show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 329 127
 msg 130299 synchronous
   from durationcanvas_ref 130043
   to durationcanvas_ref 130171
-  yz 210 2015 explicitmsg "display"
+  yz 170 2015 explicitmsg "display & write log"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 424 195
+  label_xy 424 155
+reflexivemsg 130811 synchronous
+  to durationcanvas_ref 130683
+  yz 114 2015 explicitmsg "wait response"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 327 110
 end
