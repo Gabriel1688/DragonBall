@@ -1,0 +1,18 @@
+window_sizes 959 744 291 662 550 120
+diagrams
+  active  classdiagram_ref 147812 // class_enquiry
+    647 493 100 4 0 0
+end
+show_stereotypes
+selected operation_ref 141668 // write_printer
+open
+  class_ref 141284 // user_data
+  class_ref 141412 // user_transaction_history
+  class_ref 147940 // trans_his_printer
+  class_ref 148068 // trans_his_email
+  class_ref 154596 // user_card
+  class_ref 161124 // output_enquiry
+  class_ref 161380 // output_balance
+  class_ref 161508 // output_trans_his
+end
+end
