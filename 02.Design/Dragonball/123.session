@@ -1,0 +1,18 @@
+window_sizes 1301 640 232 1063 446 120
+diagrams
+  usecasediagram_ref 128251 // Use case
+    1063 446 100 4 144 0
+  sequencediagram_ref 128023 // Charging Sequenece
+    850 356 100 4 0 0
+  active  classdiagram_ref 134679 // log file
+    850 356 100 4 132 0
+  classdiagram_ref 134551 // Charging
+    850 356 100 4 1 0
+end
+show_stereotypes
+selected usecase_ref 128123 // Charging
+open
+  usecase_ref 128507 // Inquire
+  class_ref 134807 // Logger
+end
+end

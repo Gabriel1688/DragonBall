@@ -1,0 +1,12 @@
+window_sizes 1280 672 198 1076 478 120
+diagrams
+  active  sequencediagram_ref 128679 // Bill Amount Confirm Sequence Diagram
+    1076 478 100 4 0 0
+end
+show_stereotypes
+selected usecase_ref 128295 // Bill Receipt
+open
+  usecase_ref 128039 // Bill Amount Confirm
+  usecase_ref 128167 // Bill Payment
+end
+end

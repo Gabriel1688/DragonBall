@@ -1,0 +1,20 @@
+window_sizes 1301 640 189 1106 491 75
+diagrams
+  usecasediagram_ref 128251 // use case diagram
+    1063 446 100 4 0 0
+  sequencediagram_ref 134779 // sequence diagram
+    1063 491 100 4 0 0
+  active  classdiagram_ref 141307 // Billing class
+    1106 491 100 3 0 102
+end
+show_stereotypes
+selected attribute_ref 148731 // billingData
+open
+  class_ref 128251 // FrontendData
+  class_ref 134907 // Billing
+  class_ref 142203 // TerminalOutput
+  class_ref 149243 // CardInfo
+  class_ref 149627 // Machine
+  class_ref 156155 // Data
+end
+end

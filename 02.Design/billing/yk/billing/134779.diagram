@@ -1,0 +1,56 @@
+format 74
+
+classinstance 128123 class_ref 128251 // FrontendData
+  name ""   xyz 102 4 2000 life_line_z 2000
+classinstance 128251 class_ref 128379 // backend
+  name ""   xyz 470 7 2000 life_line_z 2000
+classinstancecanvas 128379 classinstance_ref 134651 // Payment
+  xyz 244 4 2005 life_line_z 2000
+end
+classinstance 128507 class_ref 135035 // terminal
+  name ""   xyz 586 4 2005 life_line_z 2000
+note 130939 "add sth to show the judge"
+  xyzwh 636 158 2000 139 61
+durationcanvas 128635 classinstance_ref 128123 // :FrontendData
+  xyzwh 137 70 2010 11 40
+end
+durationcanvas 128763 classinstance_ref 128379 // Payment:Billing
+  xyzwh 287 70 2010 11 25
+end
+durationcanvas 129019 classinstance_ref 128251 // :backend
+  xyzwh 491 78 2010 11 25
+end
+durationcanvas 130043 classinstance_ref 128379 // Payment:Billing
+  xyzwh 287 170 2010 11 41
+end
+durationcanvas 130171 classinstance_ref 128507 // :terminal
+  xyzwh 610 165 2010 11 50
+end
+durationcanvas 130683 classinstance_ref 128379 // Payment:Billing
+  xyzwh 287 114 2010 11 40
+end
+msg 128891 asynchronous
+  from durationcanvas_ref 128635
+  to durationcanvas_ref 128763
+  yz 70 2015 explicitmsg "sendBillingData"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 163 54
+msg 129147 asynchronous
+  from durationcanvas_ref 128763
+  to durationcanvas_ref 129019
+  yz 78 2015 explicitmsg "account blance check"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  args "account"
+  label_xy 329 61
+msg 130299 synchronous
+  from durationcanvas_ref 130043
+  to durationcanvas_ref 130171
+  yz 170 2015 explicitmsg "display & write log"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 424 155
+reflexivemsg 130811 synchronous
+  to durationcanvas_ref 130683
+  yz 114 2015 explicitmsg "wait response"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 327 110
+end

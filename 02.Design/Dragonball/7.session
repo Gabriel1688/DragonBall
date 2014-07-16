@@ -1,0 +1,8 @@
+window_sizes 1280 672 260 1014 529 69
+show_stereotypes
+selected usecaseview_ref 128251 // UserCase
+open
+  
+package_ref 128123 // Dragonball
+end
+end

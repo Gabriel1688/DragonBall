@@ -1,0 +1,7 @@
+window_sizes 1280 672 198 1076 478 120
+show_stereotypes
+selected class_ref 128023 // charger
+open
+  usecaseview_ref 128023 // Charging
+end
+end

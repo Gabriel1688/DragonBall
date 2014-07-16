@@ -1,0 +1,46 @@
+format 74
+
+subject 128007 ""
+  xyzwh 200 107 2000 375 267
+classcanvas 128135 class_ref 128135 // client
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 99 199 2000
+end
+classcanvas 128263 class_ref 128263 // technician
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 628 292 2000
+end
+usecasecanvas 128391 usecase_ref 128135 // local_ckeck_PIN_card
+  xyzwh 244 215 3005 64 32 label_xy 215 247
+end
+usecasecanvas 128519 usecase_ref 128263 // cancel_transaction
+  xyzwh 480 236 3005 64 32 label_xy 461 268
+end
+usecasecanvas 128647 usecase_ref 128391 // config_machine
+  xyzwh 400 308 3005 64 32 label_xy 389 340
+end
+classcanvas 128775 class_ref 128391 // bank
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 632 135 2000
+end
+usecasecanvas 129031 usecase_ref 128519 // pay_amount
+  xyzwh 350 214 3005 64 32 label_xy 348 246
+end
+note 129159 "client use case"
+  xyzwh 54 26 2000 105 35
+usecasecanvas 130055 usecase_ref 135047 // sys_check_PIN_card
+  xyzwh 476 153 3005 64 32 label_xy 451 185
+end
+line 129415 --->
+  from ref 128135 z 3006 to ref 128391
+line 129543 --->
+  from ref 128391 z 3006 to ref 129031
+line 129799 --->
+  from ref 128263 z 3006 to ref 128647
+line 130183 --->
+  from ref 129031 z 3006 to ref 130055
+line 130311 --->
+  from ref 130055 z 3006 to ref 128775
+line 130439 --->
+  from ref 129031 z 3006 to ref 128519
+end
