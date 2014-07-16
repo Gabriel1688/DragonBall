@@ -1,13 +1,14 @@
 window_sizes 1920 1056 493 1421 862 120
 diagrams
+  active  classdiagram_ref 134551 // Charging
+    1421 862 130 4 0 0
   classdiagram_ref 134679 // log file
     1136 689 100 4 0 0
-  active  classdiagram_ref 134551 // Charging
-    1421 862 100 4 0 0
 end
 show_stereotypes
-selected operation_ref 142615 // Process
+selected operation_ref 156311 // Pack
 open
+  class_ref 134807 // Logger
   class_ref 141335 // Charger
   class_ref 141463 // Service
   class_ref 141591 // TcpService
