@@ -1,0 +1,12 @@
+window_sizes 996 716 240 750 578 64
+diagrams
+  active  usecasediagram_ref 128251 // Use case
+    750 578 100 4 0 0
+end
+show_stereotypes
+selected usecasediagram_ref 128251 // Use case
+open
+  usecase_ref 128123 // Charging
+  usecase_ref 128507 // Inquire
+end
+end

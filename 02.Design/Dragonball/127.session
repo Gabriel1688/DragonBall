@@ -1,0 +1,12 @@
+window_sizes 1855 1056 278 1571 918 64
+diagrams
+  active  usecasediagram_ref 128251 // Use case
+    1516 807 137 4 0 0
+end
+show_stereotypes
+selected usecaseview_ref 128251 // UserCase
+open
+  usecase_ref 128123 // Charging
+  usecase_ref 128507 // Inquire
+end
+end

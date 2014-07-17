@@ -1,0 +1,20 @@
+window_sizes 1855 1056 281 1568 918 64
+diagrams
+  usecasediagram_ref 128251 // Use case
+    1571 918 137 4 46 0
+  classdiagram_ref 134655 // Enquiry
+    1400 918 119 4 371 0
+  active  classdiagram_ref 141183 // Authentication
+    1568 918 150 4 0 0
+end
+show_stereotypes
+selected classdiagram_ref 141183 // Authentication
+open
+  usecase_ref 128123 // Charging
+  usecase_ref 128507 // Inquire
+  class_ref 134655 // Customer
+  class_ref 135039 // CAccount
+  classrelation_ref 135039 // <composition>
+  class_ref 135295 // CTransaction
+end
+end
