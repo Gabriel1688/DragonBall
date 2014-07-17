@@ -1,7 +1,7 @@
-window_sizes 1280 672 198 1076 478 120
+window_sizes 1366 744 198 1162 550 120
 diagrams
   active  usecasediagram_ref 128135 // use case
-    1076 478 100 4 3 0
+    1716 862 100 4 0 0
 end
 show_stereotypes
 selected 

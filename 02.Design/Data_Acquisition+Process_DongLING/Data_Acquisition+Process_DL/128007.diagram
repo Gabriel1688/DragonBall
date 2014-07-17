@@ -1,0 +1,61 @@
+format 74
+
+subject 128007 "SmartController"
+  xyzwh 339.99 139.806 2000 245 148
+subject 128135 "DataSource"
+  xyzwh 180.563 180.69 2000 146 108
+subject 128263 "Backend"
+  xyzwh 599.329 175.003 2000 124 111
+note 128391 "DataAcquisitionProcess"
+  xyzwh 27.4342 25.711 2005 153 35
+usecasecanvas 128647 usecase_ref 128135 // DataBilling
+  xyzwh 495 217 3005 64 32 label_xy 497 249
+end
+usecasecanvas 128775 usecase_ref 128263 // BillingSystem
+  xyzwh 630 218 3005 64 32 label_xy 625 252
+end
+usecasecanvas 128903 usecase_ref 128391 // DataSourceConfiguration
+  xyzwh 220 217 3005 64 32 label_xy 184 249
+end
+usecasecanvas 129031 usecase_ref 128519 // CardIdentifier
+  xyzwh 365 217 3005 64 32 label_xy 362 250
+end
+note 129159 "Configure the data that is from RS-232, RS-485 or CAN Bus.
+"
+  xyzwh 181.881 317.145 2000 139 73
+note 129287 "Bank computer system. "
+  xyzwh 590.586 333.865 2000 155 35
+usecasecanvas 129415 usecase_ref 135047 // DataReceiverProcess
+  xyzwh 427 177 3010 64 32 label_xy 400 161
+end
+classcanvas 130183 class_ref 134919 // Client
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 3.24 199.38 2005
+end
+classcanvas 130311 class_ref 135047 // SystemOperator
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 740.94 238.66 2005
+end
+classcanvas 130439 class_ref 135175 // FinanceManager
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 738.58 119.36 2005
+end
+subject 131719 "DistanceSystem"
+  xyzwh 73 214 2000 103 33
+subject 131847 ""
+  xyzwh 65 118 2000 671 184
+line 129543 --->
+  from ref 128903 z 3006 to ref 129031
+line 129671 --->
+  from ref 129031 z 3011 to ref 129415
+line 129799 --->
+  from ref 129415 z 3011 to ref 128647
+line 129927 --->
+  from ref 128647 z 3006 to ref 128775
+line 131335 --->
+  from ref 130311 z 3006 to ref 128775
+line 131591 --->
+  from ref 130439 z 3006 to ref 128775
+line 131975 --->
+  from ref 130183 z 3006 to ref 128903
+end

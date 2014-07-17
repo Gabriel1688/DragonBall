@@ -1,8 +1,17 @@
 window_sizes 1280 672 260 1014 529 69
+diagrams
+  sequencediagram_ref 128023 // Charging Sequenece
+    811 423 100 4 0 0
+  active  classdiagram_ref 134679 // log file
+    1014 529 100 4 0 0
+  classdiagram_ref 134551 // Charging
+    1014 529 100 4 0 0
+  usecasediagram_ref 128251 // Use case
+    811 423 100 4 0 0
+end
 show_stereotypes
-selected usecaseview_ref 128251 // UserCase
+selected class_ref 141591 // TcpService
 open
-  
-package_ref 128123 // Dragonball
+  usecaseview_ref 128251 // UserCase
 end
 end

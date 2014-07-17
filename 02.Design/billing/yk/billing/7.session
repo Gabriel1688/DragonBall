@@ -1,0 +1,15 @@
+window_sizes 1366 744 218 1142 598 72
+diagrams
+  usecasediagram_ref 128251 // use case diagram
+    1142 598 100 4 0 0
+  sequencediagram_ref 134779 // sequence diagram
+    763 382 100 4 0 0
+  active  classdiagram_ref 141307 // Billing class
+    1140 569 100 3 130 0
+end
+show_stereotypes
+selected classdiagram_ref 141307 // Billing class
+open
+  usecaseview_ref 128251 // use case
+end
+end

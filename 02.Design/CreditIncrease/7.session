@@ -2,6 +2,12 @@ window_sizes 1280 672 320 954 478 120
 diagrams
   active  sequencediagram_ref 141307 // Purchase
     954 478 100 4 0 0
+  usecasediagram_ref 128123 // CreditInc
+    763 382 100 4 0 0
+  sequencediagram_ref 134651 // Deposit
+    763 382 100 4 668 0
+  usecasediagram_ref 141179 // Purchase
+    763 382 100 4 0 0
 end
 show_stereotypes
 selected sequencediagram_ref 141307 // Purchase
