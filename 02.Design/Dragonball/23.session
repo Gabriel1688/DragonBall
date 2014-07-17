@@ -6,10 +6,10 @@ diagrams
     1136 689 100 4 0 0
 end
 show_stereotypes
-selected operation_ref 156311 // Pack
+selected classdiagram_ref 134551 // Charging
 open
   class_ref 134807 // Logger
-  class_ref 141335 // Charger
+  class_ref 141335 // Process
   class_ref 141463 // Service
   class_ref 141591 // TcpService
   class_ref 141719 // XmlService
