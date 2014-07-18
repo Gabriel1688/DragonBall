@@ -1,0 +1,15 @@
+window_sizes 1366 744 320 1040 606 64
+diagrams
+  usecasediagram_ref 128251 // Use case
+    832 484 100 4 0 0
+  classdiagram_ref 134655 // Enquiry
+    832 484 100 4 189 0
+  active  classdiagram_ref 141183 // Authentication
+    832 484 100 4 15 0
+end
+show_stereotypes
+selected classdiagram_ref 141183 // Authentication
+open
+  usecaseview_ref 128251 // UserCase
+end
+end

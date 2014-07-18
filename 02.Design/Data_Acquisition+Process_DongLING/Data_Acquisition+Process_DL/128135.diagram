@@ -1,32 +1,58 @@
 format 74
 
 classcanvas 128007 class_ref 128007 // InterfaceDataSource
-  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 113 107 2000
-end
-classcanvas 128135 class_ref 128135 // DataAcquisition
-  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 285 105 2000
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility yes show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 90 98 2000
 end
 classcanvas 128263 class_ref 128263 // DataBilling
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 427 102 2000
+  xyz 502 256 2000
 end
 classcanvas 128391 class_ref 128391 // InterfaceDataForwarding
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 543 101 2000
+  xyz 605 254 2000
 end
 classcanvas 128647 class_ref 141831 // InterfaceDataSourceRS485
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 176 373 2000
+  xyz 196 323 2000
 end
 classcanvas 129159 class_ref 141703 // InterfaceDataSourceCanBus
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 23 294 2000
+  xyz 3 324 2000
 end
-relationcanvas 128903 relation_ref 128135 // <generalisation>
-  decenter_end 725
-  from ref 128647 z 2001 to ref 128007
+note 129671 "InterfaceDataSource:
+Read a register data, get the type of Datasource (e.g.:CAN Bus, RS-485, etc), transfer the Data to DataSource related."
+  xyzwh 24 454 2000 219 105
+note 129799 "DataSource basic class:
+Geberate sub-class for CAN Bus, RS-485, etc, checkout the Data with unique ID number in the system."
+  xyzwh 262 473 2000 229 83
+note 129927 "DataBilling:
+Identify tha card;
+Transmit the Data to InterfaceDataForwarding."
+  xyzwh 518 470 2000 189 85
+note 130055 "InterfaceDataForwarding:
+repackage the Data to backend."
+  xyzwh 525 565 2000 201 51
+classcanvas 130183 class_ref 161415 // InterfaceDataSourceRS232
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 89 273 2000
+end
+classcanvas 130439 class_ref 161543 // DataRsore
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 393 257 2000
+end
+relationcanvas 130311 relation_ref 141575 // <generalisation>
+  from ref 130183 z 2001 to ref 128007
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130823 relation_ref 141703 // <association>
+  decenter_begin 584
+  decenter_end 275
+  from ref 128647 z 2007 to point 292 250
+  line 131207 z 2007 to point 170 231
+  line 130951 z 2007 to point 49 251
+  line 131079 z 2007 to ref 129159
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end

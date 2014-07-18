@@ -1,12 +1,14 @@
 window_sizes 1366 744 312 1048 550 120
 diagrams
-  usecasediagram_ref 128002 // uc_diagram_enquiry
-    838 440 100 4 72 0
-  active  classdiagram_ref 147812 // class_enquiry
-    1048 550 100 4 0 0
+  classdiagram_ref 147812 // class_enquiry
+    1048 550 100 4 12 0
+  sequencediagram_ref 141284 // sequence_enquiry_enquiry3
+    838 440 100 4 0 0
+  active  usecasediagram_ref 141156 // uc_diagram_enquiry_enquiry3
+    838 440 100 4 0 0
 end
 show_stereotypes
-selected class_ref 154596 // user_card
+selected usecasediagram_ref 141156 // uc_diagram_enquiry_enquiry3
 open
   usecaseview_ref 128002 // uc_view_search
 end

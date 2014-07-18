@@ -9,7 +9,7 @@ subject 128263 "Backend"
 note 128391 "DataAcquisitionProcess"
   xyzwh 27.4342 25.711 2005 153 35
 usecasecanvas 128647 usecase_ref 128135 // DataBilling
-  xyzwh 495 217 3005 64 32 label_xy 497 249
+  xyzwh 509 217 3005 64 32 label_xy 511 249
 end
 usecasecanvas 128775 usecase_ref 128263 // BillingSystem
   xyzwh 630 218 3005 64 32 label_xy 625 252
@@ -18,7 +18,7 @@ usecasecanvas 128903 usecase_ref 128391 // DataSourceConfiguration
   xyzwh 220 217 3005 64 32 label_xy 184 249
 end
 usecasecanvas 129031 usecase_ref 128519 // CardIdentifier
-  xyzwh 365 217 3005 64 32 label_xy 362 250
+  xyzwh 351 216 3005 64 32 label_xy 348 249
 end
 note 129159 "Configure the data that is from RS-232, RS-485 or CAN Bus.
 "
@@ -44,6 +44,13 @@ subject 131719 "DistanceSystem"
   xyzwh 73 214 2000 103 33
 subject 131847 ""
   xyzwh 65 118 2000 671 184
+usecasecanvas 132103 usecase_ref 141703 // ConfigurationMachine
+  xyzwh 433 237 3010 64 32 label_xy 405 269
+end
+classcanvas 132231 class_ref 148359 // Technician
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 348 324 2000
+end
 line 129543 --->
   from ref 128903 z 3006 to ref 129031
 line 129671 --->
@@ -52,10 +59,13 @@ line 129799 --->
   from ref 129415 z 3011 to ref 128647
 line 129927 --->
   from ref 128647 z 3006 to ref 128775
-line 131335 --->
-  from ref 130311 z 3006 to ref 128775
-line 131591 --->
-  from ref 130439 z 3006 to ref 128775
-line 131975 --->
+line 132615 ----
   from ref 130183 z 3006 to ref 128903
+line 132743 ----
+  from ref 130311 z 3006 to ref 128775
+line 132999 ----
+  from ref 130439 z 3006 to ref 128775
+line 133127 ----
+  from ref 132231 z 3011 to point 399 266
+  line 133255 z 3011 to ref 132103
 end

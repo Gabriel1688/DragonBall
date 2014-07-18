@@ -1,0 +1,11 @@
+window_sizes 1366 744 320 1040 606 64
+diagrams
+  active  classdiagram_ref 134655 // Enquiry
+    832 484 100 4 749 0
+end
+show_stereotypes
+selected classdiagram_ref 134655 // Enquiry
+open
+  usecaseview_ref 128251 // UserCase
+end
+end
