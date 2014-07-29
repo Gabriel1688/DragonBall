@@ -1,6 +1,8 @@
 #include "mainuser.h"
 #include "dragonball.h"
 #include <QSize>
+#include "inputreader.h"
+
 
 MainUser::MainUser(QWidget *parent) :
     QWidget(parent)
@@ -89,7 +91,4 @@ MainUser::MainUser(QWidget *parent) :
 
 }
 
-MainUser::~MainUser()
-{
 
-}
