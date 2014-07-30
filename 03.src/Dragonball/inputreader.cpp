@@ -107,7 +107,7 @@ InputReader::InputReader(QWidget *parent) :
     //setStyleSheet("background-image: url(:/home/james/work/qt/Dragonball/image/image-bg.jpg)");
     //create button
 
-    QPixmap bkgnd("/home/james/work/qt/Dragonball/image/image-bg.jpg");
+    QPixmap bkgnd("./image/image-bg.jpg");
     bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette palette;
     palette.setBrush(QPalette::Background, bkgnd);
