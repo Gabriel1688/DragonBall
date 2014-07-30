@@ -3,7 +3,7 @@ diagrams
   usecasediagram_ref 128251 // Use case
     1571 918 137 4 46 0
   active  classdiagram_ref 134655 // Enquiry
-    1755 918 189 4 47 0
+    1755 918 188 4 0 0
   classdiagram_ref 141183 // Authentication
     1568 918 150 4 12 0
 end
