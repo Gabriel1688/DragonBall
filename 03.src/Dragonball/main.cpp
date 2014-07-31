@@ -4,7 +4,7 @@
 #include <QObject>
 #include "mainuser.h"
 #include "inputreader.h"
-#include "choosemonth.h"
+#include "showmonthes.h"
 
 int main (int argc, char ** argv)
 {
@@ -13,8 +13,14 @@ int main (int argc, char ** argv)
     //mainDialog.show();
     //InputReader inputDialog;
     //inputDialog.show();
-    ChooseMonth monthDialog;
-    monthDialog.show();
+    QList<QString> text;
+    text.append("2014-02");
+    text.append("2014-03");
+    text.append("2014-04");
+
+    ShowMonthes monthdialog(text);
+    monthdialog.show();
+
     return app.exec();
 
 }
