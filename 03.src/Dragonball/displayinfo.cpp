@@ -1,19 +1,14 @@
-#include "showmonthes.h"
+#include "displayinfo.h"
+#include <QPushButton>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QLabel>
 #include "dragonball.h"
-// show
-
-ShowMonthes::ShowMonthes(QWidget *parent) :
-    QWidget(parent)
-{
 
 
 
-}
 
-
-ShowMonthes::ShowMonthes(QList <QString> &list,QWidget *parent) :
-    QWidget(parent)
-
+DisplayInfo::DisplayInfo(QString &text, QWidget *parent)
 {
     resize(WIDTH,HEIGHT);
     setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
@@ -28,31 +23,9 @@ ShowMonthes::ShowMonthes(QList <QString> &list,QWidget *parent) :
     titleLabel->setFont(QFont("Trebuchet",20,QFont::Bold));
     hTitleLayout->addWidget(titleLabel,1,Qt::AlignCenter);
 
-    // create 8 buttons
-
-    for (int i = 0; i < NumOfMonths; i++) {
-        if (list.isEmpty() == false) {
-            monthButton[i] = createButton(list.first() , SLOT(monthButtonClicked()));
-            list.removeFirst();
-        } else {
-            monthButton[i] = createButton("" , SLOT(monthButtonClicked()));
-            monthButton[i]->setDisabled(true);
-        }
-        monthButton[i]->setFont(QFont("Trebuchet",20,QFont::Bold));
-    }
-    // create back , next and cancel button
-
-    QGridLayout *mainLayout = new QGridLayout();
-
-    for (int i = 0; i < NumOfMonths; i++) {
-        int row = i / 4 + 1;
-        int column = ((i) %4 ) +1;
-        qDebug("row = %d , column = %d",row,column);
-        mainLayout->addWidget(monthButton[i],row,column);
-    }
-    mainLayout->setContentsMargins(20,100,20,100);
-   // hButtonLayout->setContentsMargins(0,80,0,80);
-
+    textLabel = new QLabel(text);
+    textLabel->setFont(QFont("Trebuchet",20,QFont::Bold));
+    hButtonLayout->addWidget(textLabel);
 
     QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Minimum);
     sizePolicy1.setHorizontalStretch(0);
@@ -77,7 +50,6 @@ ShowMonthes::ShowMonthes(QList <QString> &list,QWidget *parent) :
 
 
 
-    hButtonLayout->addLayout(mainLayout);
     vMainLayout->addLayout(hTitleLayout);
     vMainLayout->addLayout(hButtonLayout);
     vMainLayout->addLayout(hBottomLayout);
@@ -92,22 +64,3 @@ ShowMonthes::ShowMonthes(QList <QString> &list,QWidget *parent) :
     palette.setBrush(QPalette::Background, bkgnd);
     this->setPalette(palette);
 }
-
-
- void ShowMonthes::monthButtonClicked()
- {
- }
-
- void ShowMonthes::functoinClicked()
- {
- }
-
-
-
- Button *ShowMonthes::createButton(const QString &text, const char *member)
- {
-     Button *button = new Button(text);
-     connect(button,SIGNAL(clicked()),this,member);
-     return button;
- }
-
