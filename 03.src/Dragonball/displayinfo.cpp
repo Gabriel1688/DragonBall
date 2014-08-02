@@ -53,6 +53,10 @@ DisplayInfo::DisplayInfo(QString &text, QWidget *parent)
     vMainLayout->addLayout(hTitleLayout);
     vMainLayout->addLayout(hButtonLayout);
     vMainLayout->addLayout(hBottomLayout);
+    vMainLayout->setStretchFactor(hTitleLayout,20);
+
+    vMainLayout->setStretchFactor(hButtonLayout,60);
+   vMainLayout->setStretchFactor(hBottomLayout,15);
 
     setLayout(vMainLayout);
     //setStyleSheet("background-image: url(:/home/james/work/qt/Dragonball/image/image-bg.jpg)");
