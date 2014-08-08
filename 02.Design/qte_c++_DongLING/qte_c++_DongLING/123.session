@@ -1,7 +1,10 @@
 window_sizes 1301 640 320 975 482 84
+diagrams
+  active  usecasediagram_ref 128135 // use case
+    780 385 100 4 0 0
+end
 show_stereotypes
-selected 
-  package_ref 129 // qte_c++_DongLING
+selected usecasediagram_ref 128135 // use case
 open
   usecaseview_ref 128263 // client_terminal_bank
 end
