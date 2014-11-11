@@ -1,1 +1,2 @@
-this is a  test for the git merge command 
+this is a  test for the git megred result of manual solve confliction
+this is a  test for the git megred result of manual solve confliction
