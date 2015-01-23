@@ -1,6 +1,6 @@
 format 74
 "Dragonball" // Dragonball
-  revision 6
+  revision 12
   modified_by 23 "james"
   // class settings
   //class diagram settings
@@ -265,12 +265,12 @@ ${inlines}
     end
 
     classdiagram 134551 "Charging"
-      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition yes show_members_visibility yes show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language c++ show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
       size A4
     end
 
     classdiagram 134679 "log file"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition yes show_members_visibility yes show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
       size A4
     end
 
@@ -427,93 +427,9 @@ ${inlines}
 	
 	
       end
-    end
 
-    class 141335 "Charger"
-      visibility package 
-      cpp_decl "${comment}${template}class ${name}${inherit} {
-${members}};
-${inlines}
-"
-      java_decl ""
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      attribute 134807 "CardId"
-	private explicit_type "string"
-	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
-"
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	comment "Member card Id"
-      end
-
-      attribute 134935 "CreaditCardNumber"
-	private explicit_type "string"
-	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
-"
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 135063 "BinderStatus"
-	private explicit_type "bool"
-	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
-"
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 135191 "Date"
-	private explicit_type "string"
-	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
-"
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 135319 "Time"
-	private explicit_type "string"
-	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
-"
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      classrelation 135191 // <generalisation>
-	relation 135191 ---|>
-	  a public
-	    cpp default "${type}"
-	    classrelation_ref 135191 // <generalisation>
-	  b parent class_ref 141463 // Service
-      end
-
-      classrelation 135319 // <aggregation>
-	relation 135319 o---
-	  a role_name "" private
-	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
-"
-	    classrelation_ref 135319 // <aggregation>
-	  b role_name "" private
-	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
-"
-	    classrelation_ref 135447 // <aggregation>
-      end
-
-      operation 142487 "Pack"
-	cpp_virtual public explicit_return_type "bool"
+      operation 149143 "GetLogSize"
+	public explicit_return_type "bool"
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
 "
@@ -526,6 +442,33 @@ ${inlines}
 	
       end
 
+      operation 149271 "CreatNewLogFile"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 141335 "Process"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
       operation 142615 "Process"
 	cpp_virtual public explicit_return_type "bool"
 	nparams 0
@@ -538,6 +481,42 @@ ${inlines}
 	
 	
 	
+      end
+
+      operation 149527 "Process"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "service" type class_ref 141463 // Service
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}const ${t0} & ${p0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}const ${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      classrelation 128279 // <unidirectional association>
+	relation 128279 --->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 128279 // <unidirectional association>
+	  b parent class_ref 141463 // Service
+      end
+
+      classrelation 128663 // <dependency>
+	relation 128663 -_->
+	  a default
+	    cpp default "#include in source"
+	    classrelation_ref 128663 // <dependency>
+	  b parent class_ref 148247 // Account
+      end
+
+      classrelation 141975 // <composition>
+	relation_ref 141847 // <composition>
       end
     end
 
@@ -645,8 +624,55 @@ ${inlines}
 	
       end
 
-      classrelation 135447 // <aggregation>
-	relation_ref 135319 // <aggregation>
+      attribute 142103 "serviveType"
+	private explicit_type "int"
+	constraint "-"
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	comment "0 socket 1 XML webservice"
+      end
+
+      operation 149655 "Pack"
+	cpp_virtual public explicit_return_type "bool"
+	nparams 1
+	  param in name "transActionType" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      classrelation 141847 // <composition>
+	relation 141847 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 141847 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 141975 // <composition>
+      end
+
+      classrelation 142359 // <realization>
+	relation 142231 -_-|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 142359 // <realization>
+	  b parent class_ref 155031 // FSM
+      end
+
+      classrelation 142615 // <aggregation>
+	relation_ref 142359 // <aggregation>
       end
     end
 
@@ -662,12 +688,43 @@ ${inlines}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 134935 // <generalisation>
-	relation 134935 ---|>
+      classrelation 128023 // <generalisation>
+	relation 128023 ---|>
 	  a public
 	    cpp default "${type}"
-	    classrelation_ref 134935 // <generalisation>
+	    classrelation_ref 128023 // <generalisation>
 	  b parent class_ref 141463 // Service
+      end
+
+      classrelation 128407 // <dependency>
+	relation 128407 -_->
+	  a default
+	    cpp default "#include in source"
+	    classrelation_ref 128407 // <dependency>
+	  b parent class_ref 148247 // Account
+      end
+
+      classrelation 135191 // <dependency>
+	relation 135191 -_->
+	  a default
+	    cpp default "#include in source"
+	    classrelation_ref 135191 // <dependency>
+	  b parent class_ref 148247 // Account
+      end
+
+      operation 156183 "Pack"
+	cpp_virtual public explicit_return_type "bool"
+	nparams 1
+	  param in name "transActionType" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
       end
     end
 
@@ -683,12 +740,124 @@ ${inlines}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 135063 // <generalisation>
-	relation 135063 ---|>
+      classrelation 128151 // <generalisation>
+	relation 128151 ---|>
 	  a public
 	    cpp default "${type}"
-	    classrelation_ref 135063 // <generalisation>
+	    classrelation_ref 128151 // <generalisation>
 	  b parent class_ref 141463 // Service
+      end
+
+      classrelation 128535 // <dependency>
+	relation 128535 -_->
+	  a default
+	    cpp default "#include in source"
+	    classrelation_ref 128535 // <dependency>
+	  b parent class_ref 148247 // Account
+      end
+
+      classrelation 135319 // <dependency>
+	relation 135319 -_->
+	  a default
+	    cpp default "#include in source"
+	    classrelation_ref 135319 // <dependency>
+	  b parent class_ref 148247 // Account
+      end
+
+      operation 156311 "Pack"
+	cpp_virtual public explicit_return_type "bool"
+	nparams 1
+	  param in name "transActionType" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 148247 "Account"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 154775 "Charger"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 142103 // <realization>
+	relation 141975 -_-|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 142103 // <realization>
+	  b parent class_ref 141335 // Process
+      end
+    end
+
+    class 154903 "Inquire"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 142231 // <realization>
+	relation 142103 -_-|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 142231 // <realization>
+	  b parent class_ref 141335 // Process
+      end
+    end
+
+    class 155031 "FSM"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 142487 // <aggregation>
+	relation 142359 o---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 142487 // <aggregation>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 142615 // <aggregation>
       end
     end
   end

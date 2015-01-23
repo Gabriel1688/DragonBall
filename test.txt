@@ -1,1 +1,1 @@
-this is a  test for the git merge command 
+this is a test for merge

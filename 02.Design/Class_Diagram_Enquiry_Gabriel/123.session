@@ -1,0 +1,15 @@
+window_sizes 1285 624 320 959 430 120
+diagrams
+  active  classdiagram_ref 141183 // Authentication
+    959 430 100 4 0 0
+  classdiagram_ref 134655 // Enquiry
+    975 446 100 4 399 0
+  usecasediagram_ref 128251 // Use case
+    767 344 100 4 0 0
+end
+show_stereotypes
+selected classdiagram_ref 141183 // Authentication
+open
+  class_ref 134911 // CTemporaryClient
+end
+end
